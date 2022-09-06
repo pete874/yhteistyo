@@ -40,7 +40,7 @@ margin-right: 10px;
 
 #asidekuva-1 {
   height: 180px;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 #footereka {
@@ -55,6 +55,11 @@ margin-right: 10px;
 
 nav {
   float: right;
+  margin-right: 30px;;
+}
+
+nav a {
+  margin-left: 75px;
 }
 
 .main-content {
@@ -86,6 +91,12 @@ aside h3 {
   text-align: center;
 }
 
+aside p {
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 footer {
   width: 100%;
   background-color: #FFF2CA;
@@ -115,8 +126,8 @@ footer div {
 
 #facebook {
   margin-left: 10px;
-  margin-bottom: 5px;
-  width: 40px;
+  margin-bottom: 8px;
+  width: 36px;
 }
 
 #linkedin {
