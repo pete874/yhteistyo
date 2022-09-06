@@ -2,7 +2,7 @@ body {
   background-color: black;
   font-family: verdana, serif;
   font-size: 18px;
-  width: 1000px;
+  width: 50%;
   margin:  0 auto;
 }
 
@@ -103,5 +103,24 @@ footer div {
 }
 
 #linkit {
+  display: grid;
   float: right;
+  margin-top: -30px;
+}
+
+#linkit h4 {
+  margin-bottom: 5px;
+  margin-top: 35px;
+}
+
+#facebook {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  width: 40px;
+}
+
+#linkedin {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  width: 40px;
 }
