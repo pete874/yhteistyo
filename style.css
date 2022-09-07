@@ -56,10 +56,18 @@ margin-right: 10px;
 nav {
   float: right;
   margin-right: 30px;
+
 }
 
 nav a {
-  margin-left: 20px;
+  margin-left: 15px;
+  text-decoration: none;
+  color: #7D8178;
+  font-size: 25px;
+}
+
+nav a:hover {
+  color: darkgrey;
 }
 
 .main-content {
@@ -121,18 +129,33 @@ footer div {
   margin-bottom: 5px;
   margin-top: 35px;
 }
+#linkit a {
+  text-decoration: none;
+}
 
 #facebook {
   float: left;
+  filter: grayscale(1);
+  transition: 0.7s;
   margin-left: 10px;
   margin-bottom: 8px;
   width: 36px;
   border-radius: 8px;
 }
 
+#facebook:hover {
+  filter: grayscale(0);
+}
+
 #linkedin {
   float: left;
+  filter: grayscale(1);
+  transition: 0.7s;
   margin-left: 10px;
   margin-bottom: 5px;
   width: 40px;
+}
+
+#linkedin:hover {
+  filter: grayscale(0);
 }
