@@ -147,7 +147,12 @@ footer div {
 
 }
 #linkit a {
+  color: #7D8178;
   text-decoration: none;
+}
+
+#linkit a:hover {
+  color: darkgrey;
 }
 
 #facebook {
