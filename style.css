@@ -45,12 +45,12 @@ margin-right: 10px;
 }
 
 #footereka {
-  height: 80px;
+  height: 90px;
   margin: 15px 10px 10px 0;
 }
 
 #footertoka {
-  height: 80px;
+  height: 90px;
   margin: 0 0 10px 0;
 }
 
@@ -107,7 +107,7 @@ footer div {
   display: inline-table;
   text-align: center;
   width: 32%;
-  height: 130px;
+  height: 125px;
 }
 
 #yhteystiedot {
