@@ -34,14 +34,13 @@ margin-right: 10px;
   height: 350px;
   width: 98%;
   object-fit: cover;
-  margin-left: 10px;
+  margin: 0 10px;
   border-radius: 10px;
 }
 
-#asidekuva-1 {
+.asidekuva-1 {
   height: 135px;
-  margin-left: 8%;
-  margin-right: auto;
+  margin: 5%;
 }
 
 #footereka {
@@ -82,21 +81,19 @@ aside {
   background-color: #7D8178;
   display: inline-table;
   margin-left: 80px;
-  text-align: left;
+  text-align: center;
   width: 28%;
+
   border-radius: 10px;
 
 }
 
-aside h3 {
-  text-align: center;
+aside p {
+
+  margin-left: 5px;
+  margin-right: 10px;
 }
 
-aside p {
-  text-align: center;
-  margin-left: 5px;
-  margin-right: 5px;
-}
 
 footer {
   width: 100%;
@@ -126,6 +123,7 @@ footer div {
 }
 
 #facebook {
+  float: left;
   margin-left: 10px;
   margin-bottom: 8px;
   width: 36px;
@@ -133,6 +131,7 @@ footer div {
 }
 
 #linkedin {
+  float: left;
   margin-left: 10px;
   margin-bottom: 5px;
   width: 40px;
