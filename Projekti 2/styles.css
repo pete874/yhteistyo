@@ -1,7 +1,6 @@
 body {
   width: 100%;
   margin: auto;
-
 }
 
 header {
@@ -9,7 +8,6 @@ text-align: center;
 }
 
 figure {
-
 }
 
 img {
@@ -17,8 +15,6 @@ width: 100%;
 min-width: 500px;
 max-width: 1500px;
 border-radius: 10px;
-
-
 }
 
 main {
