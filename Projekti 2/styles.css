@@ -13,13 +13,14 @@ figure {
 }
 
 img {
-min-width: 25%;
-
-  max-width: 40%;
+width: 100%;
+min-width: 500px;
+max-width: 1500px;
+border-radius: 10px;
 
 
 }
 
 main {
-
+  text-align: center;
 }
