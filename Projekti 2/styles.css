@@ -1,20 +1,21 @@
 body {
-  width: 1000px;
+  width: 100%;
   margin: auto;
 
 }
 
 header {
-
+text-align: center;
 }
 
 figure {
-  width: 100%;
+
 }
 
 img {
-  width: 100%;
+min-width: 25%;
 
+  max-width: 40%;
 
 
 }
