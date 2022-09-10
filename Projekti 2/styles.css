@@ -9,6 +9,11 @@ body {
 header {
 text-align: center;
 font-size: 1.8em;
+opacity: 0.7;
+}
+
+#tribute-info {
+  opacity: 0.7;
 }
 
 
@@ -31,11 +36,17 @@ p {
 section {
   border-radius: 10px;
   text-align:justify;
-  background-color: #420105;
+  background-color: #450E22;
+  opacity: 0.6;
+  transition: 0.7s;
   display: inline-block;
   margin-top: 25px;
   width: 50%;
   height: px;
+}
+
+section:hover {
+  opacity: 1;
 }
 
 section p {
@@ -48,10 +59,23 @@ aside {
   width: 25%;
   height: 500px;
   float: right;
-  background-color: #420105;
+  background-color: #450E22;
+  opacity: 0.6;
+  transition: 0.7s;
   margin: 125px 140px 0 0;
+}
+
+aside:hover {
+  opacity: 1;
 }
 
 #aside-kuva {
   width: 150px;
+}
+a {
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 50px;
+  overflow: hidden;
+
 }
