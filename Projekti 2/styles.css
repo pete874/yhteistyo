@@ -53,3 +53,7 @@ aside {
   background-color: #420105;
   margin: 125px 140px 0 0;
 }
+
+#aside-kuva {
+  width: 200px;
+}
