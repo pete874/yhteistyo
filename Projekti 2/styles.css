@@ -1,10 +1,14 @@
 body {
-  width: 100%;
+  width: 70%;
   margin: auto;
+  background-color: #000000;
+  font-size: 14px;
+  line-height: 2;
 }
 
 header {
 text-align: center;
+font-size: 1.8em;
 }
 
 figure {
@@ -19,4 +23,33 @@ border-radius: 10px;
 
 main {
   text-align: center;
+  color: white
+}
+
+p {
+  font-size: 1.4em;
+}
+
+section {
+  border-radius: 10px;
+  text-align:justify;
+  background-color: #420105;
+  display: inline-block;
+  margin-top: 25px;
+  width: 50%;
+  height: 700px;
+}
+
+section p {
+  padding: 50px;
+}
+
+aside {
+  border-radius: 10px;
+  display: inline-block;
+  width: 25%;
+  height: 500px;
+  float: right;
+  background-color: #420105;
+  margin: 125px 140px 0 0;
 }
