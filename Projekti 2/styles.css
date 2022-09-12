@@ -12,19 +12,31 @@ body {
 
 header {
 text-align: center;
-font-size: 1em;
 opacity: 0.7;
 }
 
 h1 {
-  font-size: 3em;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 6em;
+  margin-top: 0px;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-top: -90px;
+}
+
+#hanoi {
+  color: #594686;
+}
+
+#rocks {
+  color: #AE2D3B;
 }
 
 #tribute-info {
   opacity: 0.7;
 }
-
-
 
 img {
 width: 100%;
@@ -40,18 +52,21 @@ img:hover {
 
 main {
   text-align: center;
-  color: white;
+  color: #FDFFD9;
 }
 
 #main-content {
   width: 100%;
   display: table-row;
-
-
 }
 
 p {
   font-size: 1.4em;
+}
+
+#tribute-info {
+  font-size: 1.6em;
+  padding: 25px 0;
 }
 
 section {
@@ -65,9 +80,6 @@ section {
   margin-left: 50px;
   width: 60%;
   float: left;
-
-
-
 }
 
 section:hover {
@@ -88,7 +100,6 @@ aside {
   opacity: 0.6;
   transition: 0.7s;
   margin: 60px 50px 0 0;
-
 }
 
 table {
@@ -109,4 +120,5 @@ a {
   font-size: 20px;
   font-weight: bolder;
   padding-bottom: 50px;
+  text-decoration: none;
 }
