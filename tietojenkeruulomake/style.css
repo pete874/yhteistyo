@@ -1,0 +1,25 @@
+body {
+  width: 100%;
+}
+
+main {
+  margin: auto;
+  width: 70%;
+  background-color: lightgreen;
+}
+
+form {
+
+  max-width: 50%;
+  margin: 50px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.text_inputs {
+  display: grid;
+  grid-row-gap: 10px;
+  grid-template-columns: 1fr auto;
+}
