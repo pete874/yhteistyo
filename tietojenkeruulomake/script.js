@@ -25,4 +25,5 @@ function tarkasta(form) {
     form.snimi.focus();
     return false;
   }
-}
+
+  // Tarkistetaan emailin ehdot:
