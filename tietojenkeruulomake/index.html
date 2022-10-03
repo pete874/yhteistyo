@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js">
 
@@ -30,10 +33,10 @@
       <h4>Valitse vaihtoehto:</h4>
 
       <div class="radio_btns">
-        <input type="radio" class="radio" name="" value="">
+        <input type="radio" class="radio" name="radio" value="">
         <label for="">Minulle saa lähettää uutiskirjeitä</label>
         <br>
-        <input type="radio" class="radio" name="" value="">
+        <input type="radio" class="radio" name="radio" value="">
         <label for="">En halua uutiskirjeitä</label>
       </div>
 
@@ -50,15 +53,15 @@
         <br>
         <label for="">Javascript</label>
         <input type="checkbox" name="" value="">
-
       </div>
-
-
-
       <br>
-      <input type="submit" name="submit" value="tarkasta" id="button">    <!--Lisäsin napin jotta pystytään tarkistamaan toimiiko javascript-->
 
-      </form>
+      <div class="button">
+        <input class="submit" type="submit" name="submit" value="Tarkasta">
+        <input class="submit" type="submit" name="submit" value="Tyhjennä">
+      </div>   <!--Lisäsin napin jotta pystytään tarkistamaan toimiiko javascript-->
+
+    </form>
     </main>
   </body>
 </html>

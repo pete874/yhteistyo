@@ -5,11 +5,12 @@ body {
 
 main {
   margin: auto;
+
 }
 
 form {
   background-color: lightblue;
-  border: 4px solid lightgreen;
+  border: 2px solid white;
   border-radius: 15px;
   width: 28%;
   min-width: 350px;
@@ -18,13 +19,11 @@ form {
   padding: 15px;
 }
 
-h1 {
+h1, h4 {
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 
-h4 {
-  text-align: center;
-}
 
 .text_inputs {
   display: grid;
@@ -38,12 +37,18 @@ h4 {
   width: 130px;
 }
 
+input {
+  border-radius: 3px 7px;
+  border: none;
+}
+
 textarea {
   width: 170px;
+  border-radius: 5px 15px;
+  border: none;
 }
 
 .radio_btns {
-
   width: 250px;
   margin: auto;
 }
@@ -58,8 +63,28 @@ hr {
   margin-top: 25px;
 }
 
+.button {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 100px;
+}
 
-#button {
-  width: 75px;
+.submit {
+  background-color: #EAFCFF;
+  border-radius: 5px;
+  width: 80px;
+  height: 25px;
   margin: auto;
+  transition: 0.5s;
+}
+
+.submit:hover {
+  background-color: #C9E7EC;
+  font-size: 15px;
+}
+
+:focus {
+  border: 1px solid;
+  outline-color: #96CDD6;
+  background-color: #DFDFDF;
 }
