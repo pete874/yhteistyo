@@ -12,21 +12,51 @@
     <main>
 
       <form class="" action="index.html" method="post" onsubmit="return tarkasta(this)" onreset="return tyhjenna(this)">
-        <h1>Tietojenkeruulomake</h1>
-        <div class="text_inputs">
+        <h1>Palautekysely</h1>
 
-        <div class=""><label for="">Anna Etunimi:</label></div>
-        <div class=""><input type="text" name="enimi" value="" id="etunimi"></div>
-        <div class=""><label for="">Anna Sukunimi:</label></div>
-        <div class=""><input type="text" name="snimi" value="" id="sukunimi"></div>
-        <div class=""><label for="">Anna sähköpostisi:</label></div>
-        <div class=""><input type="text" name="email" value="" id="sposti"></div>
-        <div class=""><label for="">Anna palautetta:</label></div>
-        <div class=""><textarea name="textarea" rows="8" cols="80"></textarea></div>
+      <div class="text_inputs">
+        <div class="cell1"><label for="">Anna Etunimesi:</label></div>
+        <div class="cell2"><input type="text" name="enimi" value="" id="etunimi"></div>
+        <div class="cell1"><label for="">Anna Sukunimesi:</label></div>
+        <div class="cell2"><input type="text" name="snimi" value="" id="sukunimi"></div>
+        <div class="cell1"><label for="">Anna sähköpostisi:</label></div>
+        <div class="cell2"><input type="text" name="email" value="" id="sposti"></div>
+        <div class="cell1"><label for="">Kirjoita vapaamuotoinen palaute kurssista:</label></div>
+        <div class="cell2"><textarea name="textarea" rows="8" cols="80"></textarea></div>
+      </div>
+
+      <hr>
+
+      <h4>Valitse vaihtoehto:</h4>
+
+      <div class="radio_btns">
+        <input type="radio" class="radio" name="" value="">
+        <label for="">Minulle saa lähettää uutiskirjeitä</label>
+        <br>
+        <input type="radio" class="radio" name="" value="">
+        <label for="">En halua uutiskirjeitä</label>
+      </div>
+
+      <hr>
+
+      <h4>Minkä osa-alueen hallitset parhaiten?</h4>
+
+      <div class="checkboxes">
+        <label for="">HTML</label>
+        <input type="checkbox" name="" value="">
+        <br>
+        <label for="">CSS</label>
+        <input type="checkbox" name="" value="">
+        <br>
+        <label for="">Javascript</label>
+        <input type="checkbox" name="" value="">
 
       </div>
 
-      <input type="submit" name="submit" value="tarkasta">    <!--Lisäsin napin jotta pystytään tarkistamaan toimiiko javascript-->
+
+
+      <br>
+      <input type="submit" name="submit" value="tarkasta" id="button">    <!--Lisäsin napin jotta pystytään tarkistamaan toimiiko javascript-->
 
       </form>
     </main>
