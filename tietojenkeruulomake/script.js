@@ -9,12 +9,13 @@ function tarkasta(form) {
   var sukunimi = form.snimi.value;
   var email = form.emaili.value;
   var textarea = form.textarea.value;
-  var radiobuttons = form.radio;
+  var radiobuttons = form.querySelector('input[name="radio"]:checked');
+  var checkboxes = form.querySelector('input[name="check"]:checked');
 
   //  Tarkistetaan etunimen pituus ja palautetaan false, jotta sivu ei siirry "kiitos" sivulle, jos nimi ei ole tarpeeksi pitkä.
 
   if (etunimi.length < 4) {
-    alert("anna pidempi kuin 4 merkkinen etunimi")
+    alert("Anna pidempi kuin 4 merkkinen etunimi")
     form.enimi.focus();
     return false;
   }
@@ -22,7 +23,7 @@ function tarkasta(form) {
   // Tarkistetaan sukunimen pituus:
 
   if (sukunimi.length < 4) {
-    alert("anna pidempi kuin 4 merkkinen sukunimi")
+    alert("Anna pidempi kuin 4 merkkinen sukunimi")
     form.snimi.focus();
     return false;
   }
@@ -32,14 +33,36 @@ function tarkasta(form) {
   var ehto = /\S+@\S+\.+\S/;
 
   if (!ehto.test(email)) {
-    alert("anna oikea emaili");
+    alert("Anna oikea sähköpostiosoite");
     form.emaili.focus();
+    return false;
+  }
+
+  // Tarkistetaan että palautteessa vähintään 20 merkkiä
+
+  if (textarea.length < 20) {
+    alert("Palautteessa täytyy olla vähintään 20 merkkiä")
+    form.textarea.focus()
     return false;
   }
 
   // Tarkistetaan radio buttonit
 
-  
+  if (radiobuttons == null) {
+    alert("Valitse jokin vaihtoehto");
+    return false;
+  }
+
+  // Tarkistetaan checkboxit
+
+  if (checkboxes == null) {
+    alert("Valitse vähintään yksi")
+    return false;
+  }
+
+
+
+
 
 
 

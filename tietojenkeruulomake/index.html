@@ -18,26 +18,28 @@
         <h1>Palautekysely</h1>
 
       <div class="text_inputs">
-        <div class="cell1"><label for="">Anna Etunimesi:</label></div>
-        <div class="cell2"><input type="text" name="enimi" value="" id="etunimi"></div>
-        <div class="cell1"><label for="">Anna Sukunimesi:</label></div>
-        <div class="cell2"><input type="text" name="snimi" value="" id="sukunimi"></div>
-        <div class="cell1"><label for="">Anna sähköpostisi:</label></div>
-        <div class="cell2"><input type="text" name="emaili" value="" id="sposti"></div>
-        <div class="cell1"><label for="">Kirjoita vapaamuotoinen palaute kurssista:</label></div>
-        <div class="cell2"><textarea name="textarea" rows="8" cols="80"></textarea></div>
+        <label class="cell1" for="">Anna Etunimesi:</label>
+        <input class="cell2" type="text" name="enimi" value="" id="etunimi">
+        <label class="cell1" for="">Anna Sukunimesi:</label>
+        <input class="cell2"  type="text" name="snimi" value="" id="sukunimi">
+        <label class="cell1"  for="">Anna sähköpostisi:</label>
+        <input class="cell2" type="text" name="emaili" value="" id="sposti">
+        <label class="cell1" for="">Kirjoita vapaamuotoinen palaute kurssista:</label>
+        <textarea class="cell2" name="textarea" rows="8" cols="80"></textarea>
       </div>
 
       <hr>
 
       <h4>Valitse vaihtoehto:</h4>
 
-      <div class="radio_btns">
+      <div class="radio_btns" id="radio_btns">
         <input type="radio" class="radio" name="radio" value="">
         <label for="">Minulle saa lähettää uutiskirjeitä</label>
         <br>
         <input type="radio" class="radio" name="radio" value="">
-        <label for="">En halua uutiskirjeitä</label>
+        <label for="">En halua uutiskirjeitä</label> <br>
+        <input type="radio" class="radio" name="radio" value="">
+        <label for="">Testibuttoni</label>
       </div>
 
       <hr>
@@ -46,13 +48,13 @@
 
       <div class="checkboxes">
         <label for="">HTML</label>
-        <input type="checkbox" name="" value="">
+        <input type="checkbox" name="check" value="">
         <br>
         <label for="">CSS</label>
-        <input type="checkbox" name="" value="">
+        <input type="checkbox" name="check" value="">
         <br>
         <label for="">Javascript</label>
-        <input type="checkbox" name="" value="">
+        <input type="checkbox" name="check" value="">
       </div>
       <br>
 
