@@ -7,8 +7,9 @@ function tarkasta(form) {
 
   var etunimi = form.enimi.value;
   var sukunimi = form.snimi.value;
-  var email = form.email.value;
+  var email = form.emaili.value;
   var textarea = form.textarea.value;
+  var radiobuttons = form.radio;
 
   //  Tarkistetaan etunimen pituus ja palautetaan false, jotta sivu ei siirry "kiitos" sivulle, jos nimi ei ole tarpeeksi pitkä.
 
@@ -25,6 +26,32 @@ function tarkasta(form) {
     form.snimi.focus();
     return false;
   }
-}
 
   // Tarkistetaan emailin ehdot:
+
+  var ehto = /\S+@\S+\.+\S/;
+
+  if (!ehto.test(email)) {
+    alert("anna oikea emaili");
+    form.emaili.focus();
+    return false;
+  }
+
+  // Tarkistetaan radio buttonit
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
