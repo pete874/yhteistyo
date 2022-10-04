@@ -83,6 +83,20 @@ hr {
   font-size: 15px;
 }
 
+.reset {
+  background-color: #EAFCFF;
+  border-radius: 5px;
+  width: 80px;
+  height: 25px;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.reset:hover {
+  background-color: #C9E7EC;
+  font-size: 15px;
+}
+
 :focus {
   border: 1px solid;
   outline-color: #96CDD6;

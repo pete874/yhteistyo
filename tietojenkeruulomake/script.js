@@ -41,8 +41,8 @@ function tarkasta(form) {
   // Tarkistetaan että palautteessa vähintään 20 merkkiä
 
   if (textarea.length < 20) {
-    alert("Palautteessa täytyy olla vähintään 20 merkkiä")
-    form.textarea.focus()
+    alert("Palautteessa täytyy olla vähintään 20 merkkiä");
+    form.textarea.focus();
     return false;
   }
 
@@ -56,25 +56,20 @@ function tarkasta(form) {
   // Tarkistetaan checkboxit
 
   if (checkboxes == null) {
-    alert("Valitse vähintään yksi")
+    alert("Valitse vähintään yksi");
     return false;
   }
+  else {
+    alert("Kiitos palautteestasi");
+  }
 
+}
+  // Kysy tyhjennetäänkö lomakkeen
 
+  function tyhjenna(lomake) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  var reset = lomake.value;
+  if (!confirm("Halautko varmasti tyhjentää lomakkeen")) {
+    return false;
+  }
 }
