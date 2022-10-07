@@ -9,6 +9,61 @@
     <title>Tietojenkeruulomake käyttäjätarinoiden perusteella</title>
   </head>
   <body>
+    <main>
 
+
+        <form class="" action="index.html" method="post" id="kyselylomake">
+          <h1 id="otsikko">Kirjautumislomake</h1>
+          <hr>
+          <p id="kuvaus">Ole hyvä ja täytä kaikki tiedot</p>
+          <div class="text_inputs">
+            <label for="">Nimi: </label>
+            <input type="text" name="" value="" placeholder="syötä koko nimesi" id="nimi">
+            <label for="">Sähköposti: </label>
+            <input type="text" name="" value="" placeholder="syötä sähköpostiosoite" id="email">
+            <label for="">Ikäsi: </label>
+            <input type="text" name="" value="" placeholder="syötä ikäsi" id="ika">
+          </div>
+
+          <div class="select">
+            <label for="">Valitse seuraavista: </label>
+            <select class="" name="" id="pudotus">
+              <option value="">Valinta</option>
+              <option value="">Ykkönen</option>
+              <option value="">Kakkonen</option>
+              <option value="">Kolmonen</option>
+            </select>
+          </div>
+
+          <div class="radio_btns">
+            <label for="">Radiobuttonit: </label>
+            <input type="radio" name="radio_1" value="">
+            <input type="radio" name="radio_2" value="">
+            <input type="radio" name="radio_3" value="">
+          </div>
+
+          <div class="checkboxes">
+            <label for="">Checkboxit: </label>
+            <input type="checkbox" name="" value="check_1">
+            <input type="checkbox" name="" value="check_2">
+            <input type="checkbox" name="" value="check_3">
+          </div>
+
+          <div class="textarea">
+            <label for="">Lisäkommentit(valinnainen): </label>
+            <textarea id="textarea" name="name" rows="8" cols="40"></textarea>
+          </div>
+
+          <button type="button" name="button" onclick="tarkasta()" id="lähetä">Lähetä</button>
+        </form>
+
+
+
+
+
+
+
+
+    </main>
   </body>
 </html>

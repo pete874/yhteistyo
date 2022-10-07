@@ -1,0 +1,32 @@
+body {
+  width: 100%;
+}
+
+main {
+
+}
+
+form {
+  text-align: center;
+  background-color: lightgreen;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 30%;
+  margin: auto;
+}
+
+.text_inputs {
+  display: grid;
+  margin: auto;
+  width: 200px;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr auto;
+}
+
+label {
+  margin-right: 10px;
+}
+
+div {
+  padding: 15px;
+}
