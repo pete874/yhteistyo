@@ -25,7 +25,7 @@ function tarkasta() {
 
   var ehto2 = /^\d+$/  // Iän ehto
 
-  if (!ehto2.test(ika) && ika < 18 && ika > 130 ) {
+  if (!ehto2.test(ika) || ika < 18 || ika > 130 ) {
     alert("Anna ikä numeroina. Ja iän pitää olla 18 ja 130 välillä");
     document.getElementById('ika').focus();
     return false;
