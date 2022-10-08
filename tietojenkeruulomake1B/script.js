@@ -17,7 +17,7 @@ function tarkasta() {
 
   // Tarkastetaan Email
 
-  var ehto = /\S+@\S+\.+\S/; //Mailin ehto
+  var ehto = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //Mailin ehto
 
   if (!ehto.test(email)) {
     alert("Anna oikea sähköpostiosoite");
