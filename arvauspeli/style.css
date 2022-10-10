@@ -1,20 +1,32 @@
 body {
 background-color: black;
+font-size: 18px;
 }
 
 main {
   width: 700px;
-  height: 800px;
+  height: 825px;
   margin: auto;
   background-color: #552F00;
   border: 5px solid #FFD9AA;
+  border-radius: 5px;
 }
 
 #logo {
-  font-size: 75px;
+  font-size: 5em;
+  font-weight: bolder;
+  text-shadow: 1px -3px 8px white;
+
+}
+
+.title {
+  font-size: 2.5em;
+  text-shadow: 1px -3px 8px white;
 }
 
 h1, h3, p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
   text-align: center;
   margin: auto;
   padding: 15px;
@@ -24,18 +36,20 @@ h1, h3, p {
 
 div {
   background-color: #AA7939;
+  margin: auto;
+  margin-top: 30px;
+  width: 500px;
   padding: 10px;
   border-radius: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 500px;
-  margin: auto;
   grid-gap: 5px;
 }
 
 button {
-  font-size: 18px;
-  font-weight: bolder;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.4em;
+  font-weight: bold;
   background-color: #FFD9AA;
   width: 100%;
   height: 100px;
