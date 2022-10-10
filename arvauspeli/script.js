@@ -19,7 +19,7 @@ window.onload = function taulukonTulostus() {
 
 function arvaus(numero) {
   var arvattuNumero = numero.value;
-  console.log(arvattuNumero)
+  console.log(arvattuNumero, arvattavaNumero)
 
   if (arvauskerrat < 3) {
     if (arvattuNumero < arvattavaNumero) {
@@ -31,6 +31,7 @@ function arvaus(numero) {
     } else if (arvattuNumero == arvattavaNumero){
       alert("OIKEIN!")
       arvauskerrat = 0;
+      arvattavaNumero = Math.floor(Math.random() * 10) + 1
       voitot++
       document.getElementById('voitot').innerHTML = "Voitot: " + voitot;
     }
@@ -38,6 +39,7 @@ function arvaus(numero) {
 
   if (arvauskerrat == 3) {
     alert("arvaukset loppuivat")
+    arvattavaNumero = Math.floor(Math.random() * 10) + 1
     haviot++
     document.getElementById('haviot').innerHTML = "Häviöt: " + haviot;
     arvauskerrat = 0;
