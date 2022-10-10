@@ -5,7 +5,7 @@ font-size: 18px;
 
 main {
   width: 700px;
-  height: 825px;
+  height: 875px;
   margin: auto;
   background-color: #552F00;
   border: 5px solid #FFD9AA;
@@ -16,7 +16,6 @@ main {
   font-size: 5em;
   font-weight: bolder;
   text-shadow: 1px -3px 8px white;
-
 }
 
 .title {
@@ -31,7 +30,7 @@ h1, h3, p {
   margin: auto;
   padding: 15px;
   color: #FFD9AA;
-  width: 50%;
+  width: 80%;
 }
 
 div {
