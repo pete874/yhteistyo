@@ -38,7 +38,7 @@ function arvaus(numero) {
   }
 
   if (arvauskerrat == 3) {
-    alert("arvaukset loppuivat")
+    alert("Arvaukset loppuivat, hävisit!")
     arvattavaNumero = Math.floor(Math.random() * 10) + 1
     haviot++
     document.getElementById('haviot').innerHTML = "Häviöt: " + haviot;
