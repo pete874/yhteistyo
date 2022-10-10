@@ -6,9 +6,9 @@ window.onload = function taulukonTulostus() {
 
   for (let i = 1; i <= 10; i++) {
     taulukko += "<button type='button' class='napit' name='napit' onclick='arvaus(this)' value='" + i + "' >" + i + "</button>"
-    if (i % 3 == 0) {
+  /*  if (i % 3 == 0) {
       taulukko += "<br>"
-    }
+    }*/
 
   }
   document.getElementById('napit').innerHTML = taulukko;
