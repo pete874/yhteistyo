@@ -71,9 +71,9 @@ function arvaus(numero) {
       position: 'center',
       backdrop: true,
       icon: 'error',
-      title: 'HÄVISIT, yritä uudelleen!',
+      title: 'HÄVISIT!<br> Oikea vastaus olisi ollut numero '+ arvattavaNumero +'<br> Yritä uudelleen!',
       showConfirmButton: false,
-      timer: 3000,
+      timer: 4000,
       color: '#552F00',
       background: '#FFD9AA'
   });
