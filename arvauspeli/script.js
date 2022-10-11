@@ -22,7 +22,7 @@ function arvaus(numero) {
   console.log(arvattuNumero, arvattavaNumero)
 
   if (arvauskerrat < 3) {
-    if (arvattuNumero < arvattavaNumero) {
+    if (arvattuNumero < arvattavaNumero) {                   // CSS Modal ohjeet: https://www.w3schools.com/howto/howto_css_modals.asp
       Swal.fire({                                           // Custom alertboxin komentoja löytyy täältä: https://sweetalert2.github.io/
         position: 'top',
         icon: 'warning',
