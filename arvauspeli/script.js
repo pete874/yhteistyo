@@ -23,13 +23,37 @@ function arvaus(numero) {
 
   if (arvauskerrat < 3) {
     if (arvattuNumero < arvattavaNumero) {
-      alert("numero on isompi")
+      Swal.fire({
+        icon: 'error',
+        title: 'Numero on isompi',
+        showConfirmButton: false,
+        timer: 1500,
+        color: '#552F00',
+        background: '#FFD9AA'
+      });
       arvauskerrat++
     } else if (arvattuNumero > arvattavaNumero) {
-      alert("numero on pienempi")
+      Swal.fire({
+        backdrop: true,
+        icon: 'error',
+        title: 'Numero on pienempi',
+        showConfirmButton: false,
+        timer: 1500,
+        color: '#552F00',
+        background: '#FFD9AA'
+    });
       arvauskerrat++
     } else if (arvattuNumero == arvattavaNumero){
-      alert("OIKEIN!")
+      Swal.fire({
+        backdrop: true,
+        icon: 'success',
+        title: 'OIKEIN! Voitit',
+        showConfirmButton: false,
+        timer: 3000,
+        color: '#552F00',
+        background: '#FFD9AA',
+        confirmButtonColor: '#552F00'
+    });
       arvauskerrat = 0;
       arvattavaNumero = Math.floor(Math.random() * 10) + 1
       voitot++
@@ -38,7 +62,15 @@ function arvaus(numero) {
   }
 
   if (arvauskerrat == 3) {
-    alert("Arvaukset loppuivat, hävisit!")
+    Swal.fire({
+      backdrop: true,
+      icon: 'error',
+      title: 'HÄVISIT, yritä uudelleen!',
+      showConfirmButton: false,
+      timer: 3000,
+      color: '#552F00',
+      background: '#FFD9AA'
+  });
     arvattavaNumero = Math.floor(Math.random() * 10) + 1
     haviot++
     document.getElementById('haviot').innerHTML = "Häviöt: " + haviot;
