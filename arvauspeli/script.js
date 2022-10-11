@@ -23,8 +23,10 @@ function arvaus(numero) {
 
   if (arvauskerrat < 3) {
     if (arvattuNumero < arvattavaNumero) {
-      Swal.fire({
-        icon: 'error',
+      Swal.fire({                                           // Custom alertboxin komentoja löytyy täältä: https://sweetalert2.github.io/
+        position: 'top',
+        icon: 'warning',
+        iconColor: '#AA4A44',
         title: 'Numero on isompi',
         showConfirmButton: false,
         timer: 1500,
@@ -34,8 +36,10 @@ function arvaus(numero) {
       arvauskerrat++
     } else if (arvattuNumero > arvattavaNumero) {
       Swal.fire({
+        position: 'top',
         backdrop: true,
-        icon: 'error',
+        icon: 'warning',
+        iconColor: '#AA4A44',
         title: 'Numero on pienempi',
         showConfirmButton: false,
         timer: 1500,
