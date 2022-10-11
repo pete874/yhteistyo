@@ -49,6 +49,7 @@ function arvaus(numero) {
       arvauskerrat++
     } else if (arvattuNumero == arvattavaNumero){
       Swal.fire({
+        position: 'center',
         backdrop: true,
         icon: 'success',
         title: 'OIKEIN! Voitit',
@@ -67,6 +68,7 @@ function arvaus(numero) {
 
   if (arvauskerrat == 3) {
     Swal.fire({
+      position: 'center',
       backdrop: true,
       icon: 'error',
       title: 'HÄVISIT, yritä uudelleen!',
