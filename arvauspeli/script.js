@@ -8,7 +8,7 @@ window.onload = function taulukonTulostus() {
   var taulukko = "";
 
   for (let i = 1; i <= 10; i++) {
-    taulukko += "<button type='button' class='napit' name='napit' onclick='arvaus(this)' value='" + i + "' >" + i + "</button>"
+    taulukko += "<button type='button' name='napit' onclick='arvaus(this)' value='" + i + "' id='" + i +"' >" + i + "</button>"
   /*  if (i % 3 == 0) {
       taulukko += "<br>"
     }*/
@@ -22,7 +22,10 @@ function arvaus(numero) {
   console.log(arvattuNumero, arvattavaNumero)
 
   if (arvauskerrat < 3) {
-    if (arvattuNumero < arvattavaNumero) {                   // CSS Modal ohjeet: https://www.w3schools.com/howto/howto_css_modals.asp
+    if (arvattuNumero < arvattavaNumero) {
+      for (let j = 1; j <= numero.value; j++) {
+        document.getElementById(j).classList.add("disabled")
+      }
       Swal.fire({                                           // Custom alertboxin komentoja löytyy täältä: https://sweetalert2.github.io/
         position: 'top',
         icon: 'warning',
@@ -35,6 +38,9 @@ function arvaus(numero) {
       });
       arvauskerrat++
     } else if (arvattuNumero > arvattavaNumero) {
+      for (let e = numero.value; e <= 10; e++) {
+        document.getElementById(e).classList.add("disabled")
+      }
       Swal.fire({                                           // Custom alertboxin komentoja löytyy täältä: https://sweetalert2.github.io/
         position: 'top',
         backdrop: true,
@@ -48,6 +54,9 @@ function arvaus(numero) {
     });
       arvauskerrat++
     } else if (arvattuNumero == arvattavaNumero){
+      for (let k = 1; k <= 10; k++) {
+        document.getElementById(k).classList.remove("disabled");
+      }
       Swal.fire({                                           // Custom alertboxin komentoja löytyy täältä: https://sweetalert2.github.io/
         position: 'center',
         backdrop: true,
@@ -67,6 +76,9 @@ function arvaus(numero) {
   }
 
   if (arvauskerrat == 3) {
+    for (let k = 1; k <= 10; k++) {
+      document.getElementById(k).classList.remove("disabled");
+    }
     Swal.fire({                                           // Custom alertboxin komentoja löytyy täältä: https://sweetalert2.github.io/
       position: 'center',
       backdrop: true,
