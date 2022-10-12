@@ -35,7 +35,7 @@ button {
   font-weight: bolder;
   font-size: 15px;
   border: none;
-  box-shadow: 1px 4px grey;
+  box-shadow: 1px 4px black;
   transition: 0.3s;
 }
 
