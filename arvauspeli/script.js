@@ -35,7 +35,7 @@ function arvaus(numero) {
       });
       arvauskerrat++
     } else if (arvattuNumero > arvattavaNumero) {
-      Swal.fire({
+      Swal.fire({                                           // Custom alertboxin komentoja löytyy täältä: https://sweetalert2.github.io/
         position: 'top',
         backdrop: true,
         icon: 'warning',
@@ -48,7 +48,7 @@ function arvaus(numero) {
     });
       arvauskerrat++
     } else if (arvattuNumero == arvattavaNumero){
-      Swal.fire({
+      Swal.fire({                                           // Custom alertboxin komentoja löytyy täältä: https://sweetalert2.github.io/
         position: 'center',
         backdrop: true,
         icon: 'success',
@@ -67,7 +67,7 @@ function arvaus(numero) {
   }
 
   if (arvauskerrat == 3) {
-    Swal.fire({
+    Swal.fire({                                           // Custom alertboxin komentoja löytyy täältä: https://sweetalert2.github.io/
       position: 'center',
       backdrop: true,
       icon: 'error',
