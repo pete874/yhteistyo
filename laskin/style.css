@@ -40,6 +40,7 @@ body {
   background-color: lightgrey;
   box-shadow: 1px 4px black;
   border: none;
+  height: 150px;
 }
 
 #naytto:focus {
