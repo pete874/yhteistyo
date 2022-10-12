@@ -25,6 +25,12 @@
   grid-row: 1/4;
   border-radius: 20px;
   background-color: lightgrey;
+  box-shadow: 1px 4px black;
+  border: none;
+}
+
+#naytto:focus {
+  outline:none;
   border: none;
 }
 
