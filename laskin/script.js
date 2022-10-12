@@ -31,6 +31,12 @@ function yht() {
 
     document.getElementById('naytto').innerHTML = eval(numero);
     numero = eval(numero);
+}
 
+function poisto() {
+  if (numero.length >= 0) {
+    numero = numero.slice(0, -1);
+    document.getElementById('naytto').innerHTML = numero;
 
+  }
 }
