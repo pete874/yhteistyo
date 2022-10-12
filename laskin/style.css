@@ -1,5 +1,14 @@
 
 
+body {
+  background-image: url("laturi.jpg");
+  background-size: 1000px 1600px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center -58px;
+}
+
+
 .div-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
