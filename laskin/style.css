@@ -30,17 +30,16 @@ body {
 #naytto {
   font-family: 'Orbitron', sans-serif;
   background-image: url("battery-charging.svg");
-  background-size: 50px 70px;
+  background-size: 30px 50px;
   background-repeat: no-repeat;
   background-position: top right;
   font-size: 35px;
   grid-column: 1/5;
-  grid-row: 1/4;
   border-radius: 20px;
   background-color: lightgrey;
   box-shadow: 1px 4px black;
+  height: 170px;
   border: none;
-  height: 150px;
 }
 
 #naytto:focus {
