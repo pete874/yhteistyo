@@ -3,18 +3,19 @@ var luku = "";
 
 
 function lisays(luku) {
-  numero += luku;
-  if (numero.length == 11) {
+  if (numero.length == 12) {
     numero += "<br>";
   }
-  if (numero.length == 26) {
+  if (numero.length == 28) {
     numero += "<br>"
   }
-  if (numero.length == 41) {
+  if (numero.length == 44) {
     numero += "<br>"
   }
-  if (numero.length > 41) {
+  if (numero.length > 59) {
     alert("Tila loppui kesken")
+  } else {
+    numero += luku;
   }
 
   document.getElementById("naytto").innerHTML = numero;
