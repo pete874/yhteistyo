@@ -43,6 +43,7 @@ body {
   margin-bottom: -20px;
   border: none;
   resize: none;
+  overflow: hidden;
 }
 
 #naytto:focus {
