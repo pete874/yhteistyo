@@ -35,7 +35,8 @@ function yht() {
 
 function poisto() {
   if (numero.length >= 0) {
-    numero = numero.slice(0, -1);
+    numero = numero.replace(/\+.?$/,'');
+
     document.getElementById('naytto').innerHTML = numero;
 
   }
