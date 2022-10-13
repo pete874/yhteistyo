@@ -35,7 +35,7 @@ function yht() {
 
 function poisto() {
   if (numero.length >= 0) {
-    numero = numero.replace(/\+.?$/,'');
+    numero = numero.replace(/\d+$/,'');
 
     document.getElementById('naytto').innerHTML = numero;
 
