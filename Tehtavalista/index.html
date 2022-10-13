@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fi" dir="ltr">
   <head>
-    <link rel="stylesheet" href="styles.css">
-<script type="text/javascript" src="script.js">
+    <link rel="stylesheet" href="">
 
-</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title></title>
+    <meta name="description" content="Yksinkertainen päivittyvä tehtävälista">
+    <meta name="keywords" content="tehtävälista, to do">
+    <title>Tehtävälista</title>
   </head>
 
   <body>
-    <h1>Tehtävälista</h1>
-<button type="button" onclick="testi()" name="button">testi</button>
+
+    <!-- Laitoin nämä yläpalkkiin, koska mielestäni osiot tuovat selkeyttä-->
+    <header>
+      <h1>Tehtävälista</h1>
+      <p id="ohje">Kirjoita tehtävä alla olevaan kenttään ja lisää se "Lisää"-painikkeella tai painamalla enter.</p>
+   </header>
+
+   <!-- täyttöpuoli -->
+    <div id="lista_div">
+      <input id="" type="text" placeholder="Kirjoita tehtävä tähän">
+      <button id="lisaa" name="lista" onclick="">Lisää</button>
+
+      <!-- tyhjä ul -->
+      <ul id="lista_ul"></ul>
+    </div>
+
+    <!-- tekijät footteriin -->
+    <footer>
+      <div id="tekijat_div">
+        <dl id="tekijat_dl">
+          <dt>Ville Saarinen</dt>
+          <dd>CSS</dd>
+          <dt>Petri Nurmi</dt>
+          <dd>JavaScript</dd>
+          <dt>Iina Hakala</dt>
+          <dd>HTML</dd>
+        </dl>
+      </div>
+    </footer>
+    <script type="text/javascript" src=""></script>
   </body>
 </html>
