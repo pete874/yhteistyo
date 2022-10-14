@@ -16,7 +16,7 @@ function lisaa() {
   ul.appendChild(li);
 
 
-  //Lisätään poistonappi listaelementtin
+  //Tehdään muuttuja poistonapille
   var poistoNappi = document.createElement("button")
 
   // Lisätään poistonapille ja li elementille classit, jotta niitä voidaan muokata CSS:ssä
