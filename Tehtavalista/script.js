@@ -5,6 +5,9 @@ function lisaa() {
   //haetaan text inputin value muuttujaan
   var tehtava = document.getElementById('linta_input').value;
 
+  //input kentän tyhjennys lisää napin painalluksen jälkeen
+  document.getElementById('linta_input').value = '';
+
   // Tehdään muuttujat ul ja li elementeille
   var ul = document.getElementById('lista_ul');
   var li = document.createElement("li");
