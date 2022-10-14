@@ -6,7 +6,7 @@ var voitot = 0;
 var haviot = 0;
 var arvattavaNumero = Math.floor(Math.random() * 10) + 1
 
-// Luodaan forloopillaa kymmenen nappia HTML:ään.
+// Luodaan forloopillaa kymmenen nappia HTML:ään. Ja CSS:ssä display:gridiksi jotta saadaan ne nätisti taulukon muotoon.
 
 window.onload = function taulukonTulostus() {
   var taulukko = "";
