@@ -19,7 +19,7 @@ function lisaa() {
   //Lisätään poistonappi listaelementtin
   var poistoNappi = document.createElement("button")
 
-  // Lisätään poistonapille ja li elementille id, jotta niitä voidaan muokata CSS:ssä
+  // Lisätään poistonapille ja li elementille classit, jotta niitä voidaan muokata CSS:ssä
   poistoNappi.setAttribute("class", "poistonappi")
   li.setAttribute("class", "lista_item")
 
@@ -35,9 +35,9 @@ function lisaa() {
 
 }
 
-//lisätään enter napin toiminnallisuus eventlistenerillä
+//lisätään enternapin toiminnallisuus eventlistenerillä
 
-//haetaan muuttumaan input jonka halutaan reagoivan napin painallukseen
+//haetaan muuttujaan input jonka halutaan reagoivan napin painallukseen
 var enter = document.getElementById('linta_input');
 
 //lisätään inputille eventlistener, joka kuuntelee napin painallusta kyseisen inputin kohdalla
