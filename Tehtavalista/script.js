@@ -13,12 +13,13 @@ function lisaa() {
   var li = document.createElement("li");
 
 
-  // Muuttuja joka luo tekstisisällön tehtava muuttujan sisällön mukaan
+  // Muuttuja joka luo tekstisisällön "tehtava" muuttujan sisällön mukaan
   var taulukkoon = document.createTextNode(tehtava);
 
-
-
+  // lisätään <li> elementti <ul> elementin sisälle
   ul.appendChild(li);
+
+  //lisätään <li> elementin sisälle tekstiä, joka vastaa tässä tapauksessa input kenttään kirjoitettua tekstiä.
   li.appendChild(taulukkoon);
 
   //Tehdään muuttuja poistonapille
