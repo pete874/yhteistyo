@@ -1,8 +1,12 @@
 
+// Tehdään tarvittavat muuttujat
+
 var arvauskerrat = 0;
 var voitot = 0;
 var haviot = 0;
 var arvattavaNumero = Math.floor(Math.random() * 10) + 1
+
+// Luodaan forloopillaa kymmenen nappia HTML:ään.
 
 window.onload = function taulukonTulostus() {
   var taulukko = "";
@@ -16,6 +20,9 @@ window.onload = function taulukonTulostus() {
   }
   document.getElementById('napit').innerHTML = taulukko;
 }
+
+//Funktio arvatulle numerolle, joka tarkistaa arvauskerrat ja onko vastaus oikein.
+//Jos arvauskerra täyttyvät, tai vastaus on oikein, arvattava numero resetoituu ja arvauskerran lähtevät alusta.
 
 function arvaus(numero) {
   var arvattuNumero = numero.value;
