@@ -40,7 +40,7 @@ function lisaa() {
 
 //lisätään enternapin toiminnallisuus eventlistenerillä
 
-//haetaan muuttujaan input jonka halutaan reagoivan napin painallukseen
+//haetaan muuttujaan input elementti, jonka halutaan reagoivan napin painallukseen
 var enter = document.getElementById('linta_input');
 
 //lisätään inputille eventlistener, joka kuuntelee napin painallusta kyseisen inputin kohdalla
