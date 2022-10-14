@@ -15,9 +15,11 @@ function lisaa() {
 
   // Muuttuja joka luo tekstisisällön tehtava muuttujan sisällön mukaan
   var taulukkoon = document.createTextNode(tehtava);
-  li.appendChild(taulukkoon);
-  ul.appendChild(li);
 
+
+
+  ul.appendChild(li);
+  li.appendChild(taulukkoon);
 
   //Tehdään muuttuja poistonapille
   var poistoNappi = document.createElement("button")
