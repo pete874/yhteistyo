@@ -59,3 +59,11 @@ enter.addEventListener("keypress", function(enterNappi) {
     document.getElementById('lista_button').click();
   }
 })
+
+function poistaValmiit() {
+  const poistettavat = document.querySelectorAll('.li_varinvaihto');
+  console.log(poistettavat)
+  poistettavat.forEach(poisto => {
+  poisto.remove();
+});
+}
