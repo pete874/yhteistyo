@@ -29,6 +29,13 @@ function lisaa() {
   poistoNappi.setAttribute("class", "poistonappi")
   li.setAttribute("class", "lista_item")
 
+  //tabIndex määritetään -1, jotta li elementin focus toimii
+  li.setAttribute("tabIndex", "-1")
+
+  //lisätään onclick focus
+  li.setAttribute("onclick", "document.getElementsByClassName('lista_item').focus();")
+
+
   // Lisätään napille onclick attribuutti, joka poistaa parent elementin, eli <li> elementin
   poistoNappi.setAttribute("onclick", "parentElement.remove();")
 
