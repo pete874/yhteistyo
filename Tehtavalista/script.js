@@ -3,10 +3,10 @@
 
 function lisaa() {
   //haetaan text inputin value muuttujaan
-  var tehtava = document.getElementById('linta_input').value;
+  var tehtava = document.getElementById('lista_input').value;
 
   //input kentän tyhjennys lisää napin painalluksen jälkeen
-  document.getElementById('linta_input').value = '';
+  document.getElementById('lista_input').value = '';
 
   // Tehdään muuttujat ul ja li elementeille
   var ul = document.getElementById('lista_ul');
@@ -44,7 +44,7 @@ function lisaa() {
 //lisätään enternapin toiminnallisuus eventlistenerillä
 
 //haetaan muuttujaan input elementti, jonka halutaan reagoivan napin painallukseen
-var enter = document.getElementById('linta_input');
+var enter = document.getElementById('lista_input');
 
 //lisätään inputille eventlistener, joka kuuntelee napin painallusta kyseisen inputin kohdalla
 enter.addEventListener("keypress", function(enterNappi) {
