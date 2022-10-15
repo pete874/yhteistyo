@@ -21,6 +21,12 @@ function lisaa() {
   //lisätään <li> elementin sisälle tekstiä, joka vastaa tässä tapauksessa input kenttään kirjoitettua tekstiä.
   li.appendChild(taulukkoon);
 
+  //classin vaihto lista itemin värinvaihtoa varten
+  function classinVaihto() {
+    li.classList.toggle("uusclassi")
+  }
+  li.addEventListener("click", classinVaihto)
+
   //Tehdään muuttuja poistonapille
   var poistoNappi = document.createElement("button")
 
@@ -52,12 +58,4 @@ enter.addEventListener("keypress", function(enterNappi) {
     //määritetään asiat jotka halutaan tapahtuvan napin painalluksen jälkeen, eli buttonin clickkaus tässä tapauksessa
     document.getElementById('lista_button').click();
   }
-})
-
-
-
-
-// eventlistener lista_item taustavärin vaihtoa varten clickattaessa. clickkaus vaihtaa klikattavan lista itemin classin nimeä
-document.getElementById('lista_ul').addEventListener("click", function(event) {
-  event.target.classList.toggle("uusclassi");
 })
