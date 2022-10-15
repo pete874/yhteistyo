@@ -22,10 +22,10 @@ function lisaa() {
   li.appendChild(taulukkoon);
 
   //classin vaihto lista itemin värinvaihtoa varten
-  function classinVaihto() {
+
+  li.addEventListener("click", function classinVaihto() {
     li.classList.toggle("uusclassi")
-  }
-  li.addEventListener("click", classinVaihto)
+  })
 
   //Tehdään muuttuja poistonapille
   var poistoNappi = document.createElement("button")
