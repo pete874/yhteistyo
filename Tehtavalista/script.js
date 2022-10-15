@@ -5,8 +5,11 @@ function lisaa() {
   //haetaan text inputin value muuttujaan
   var tehtava = document.getElementById('lista_input').value;
 
+  if (!tehtava == "") {
+
   //input kentän tyhjennys lisää napin painalluksen jälkeen
   document.getElementById('lista_input').value = '';
+
 
   // Tehdään muuttujat ul ja li elementeille
   var ul = document.getElementById('lista_ul');
@@ -42,6 +45,7 @@ function lisaa() {
 
   // Lisätään poistonappi <li> elementin alle
   li.appendChild(poistoNappi);
+}
 }
 
 
