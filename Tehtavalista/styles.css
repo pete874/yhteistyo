@@ -70,6 +70,10 @@ transition: 0.5s;
 
 }
 
+#lista_ul:empty {
+  visibility: hidden;
+}
+
 .lista_item {
   list-style: none;
   text-align: left;
