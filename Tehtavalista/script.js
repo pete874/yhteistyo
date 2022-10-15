@@ -24,7 +24,7 @@ function lisaa() {
   //classin vaihto lista itemin värinvaihtoa varten
 
   li.addEventListener("click", function classinVaihto() {
-    li.classList.toggle("uusclassi")
+    li.classList.toggle("li_varinvaihto")
   })
 
   //Tehdään muuttuja poistonapille
