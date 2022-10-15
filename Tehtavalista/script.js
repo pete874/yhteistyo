@@ -60,6 +60,7 @@ enter.addEventListener("keypress", function(enterNappi) {
   }
 })
 
+// Poistaa kaikki valmiit tehtävät
 function poistaValmiit() {
   const poistettavat = document.querySelectorAll('.li_varinvaihto');
   console.log(poistettavat)
