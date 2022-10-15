@@ -5,6 +5,7 @@ function lisaa() {
   //haetaan text inputin value muuttujaan
   var tehtava = document.getElementById('lista_input').value;
 
+  // Tarkastetaan onko input kenttään syötetty mitään. Jos kenttä on tyhjä, mitään ei syötetä listaan.
   if (!tehtava == "") {
 
   //input kentän tyhjennys lisää napin painalluksen jälkeen
