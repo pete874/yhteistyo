@@ -26,7 +26,7 @@ header p {
 }
 
 #lista_div {
-width: 50%;
+width: 33%;
 margin: 0 auto;
 text-align: center;
 padding-top: 200px;
@@ -63,10 +63,11 @@ transition: 0.5s;
 }
 
 #lista_ul {
-  background: linear-gradient(180deg, #D4BF6A 25%, #AA9339);
+  background: #F2F6D9;
   padding: 20px 30px;
   border-radius: 5px;
   box-shadow: 3px 3px 8px;
+
 }
 
 .lista_item {
@@ -97,8 +98,8 @@ transition: 0.5s;
 }
 
 .poistonappi:hover {
-  background-color: red;
-  color: orange;
+  background-color: orange;
+  color: red;
 }
 
 footer {
@@ -134,7 +135,7 @@ dd {
   list-style: none;
   text-align: left;
   font-size: 1.5em;
-  color: white;
+  color: navy;
   padding: 10px;
   margin: 10px 0;
   background: lightgreen;
