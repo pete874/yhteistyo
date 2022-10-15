@@ -12,7 +12,6 @@ function lisaa() {
   var ul = document.getElementById('lista_ul');
   var li = document.createElement("li");
 
-
   // Muuttuja joka luo tekstisisällön "tehtava" muuttujan sisällön mukaan
   var taulukkoon = document.createTextNode(tehtava);
 
@@ -29,13 +28,6 @@ function lisaa() {
   poistoNappi.setAttribute("class", "poistonappi")
   li.setAttribute("class", "lista_item")
 
-  //tabIndex määritetään -1, jotta li elementin focus toimii
-  li.setAttribute("tabIndex", "-1")
-
-  //lisätään onclick focus
-  li.setAttribute("onclick", "document.getElementsByClassName('lista_item').focus();")
-
-
   // Lisätään napille onclick attribuutti, joka poistaa parent elementin, eli <li> elementin
   poistoNappi.setAttribute("onclick", "parentElement.remove();")
 
@@ -44,9 +36,9 @@ function lisaa() {
 
   // Lisätään poistonappi <li> elementin alle
   li.appendChild(poistoNappi);
-
-
 }
+
+
 
 //lisätään enternapin toiminnallisuus eventlistenerillä
 
@@ -60,4 +52,12 @@ enter.addEventListener("keypress", function(enterNappi) {
     //määritetään asiat jotka halutaan tapahtuvan napin painalluksen jälkeen, eli buttonin clickkaus tässä tapauksessa
     document.getElementById('lista_button').click();
   }
+})
+
+
+
+
+// eventlistener lista_item taustavärin vaihtoa varten clickattaessa. clickkaus vaihtaa klikattavan lista itemin classin nimeä
+document.getElementById('lista_ul').addEventListener("click", function(event) {
+  event.target.className = "uusclassi";
 })
