@@ -59,5 +59,5 @@ enter.addEventListener("keypress", function(enterNappi) {
 
 // eventlistener lista_item taustavärin vaihtoa varten clickattaessa. clickkaus vaihtaa klikattavan lista itemin classin nimeä
 document.getElementById('lista_ul').addEventListener("click", function(event) {
-  event.target.className = "uusclassi";
+  event.target.classList.toggle("uusclassi");
 })
