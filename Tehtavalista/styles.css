@@ -177,6 +177,9 @@ dd {
     margin-bottom: 15px;
   }
 
+  .lista_item:hover {
+  background: linear-gradient(lightgreen, green);
+}
   #lista_input {
     width: 100%;
   }
@@ -204,6 +207,10 @@ dd {
 
   header p {
     display: none;
+  }
+
+  .lista_item:hover {
+  background: linear-gradient(lightgreen, green);
   }
 
   dt {
