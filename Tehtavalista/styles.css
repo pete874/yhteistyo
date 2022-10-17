@@ -1,0 +1,219 @@
+/* Desktop resoluutioille */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 102, 102, 0.5), rgba(0, 102, 102, 1));
+  font-size: 14px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background-color: #06274C;
+}
+
+header h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3em;
+  color: #E0F59C;
+  margin: 15px 0 0 0;
+}
+
+header p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  color: lightblue;
+  margin: 5px 0 15px 0;
+}
+
+#lista_div {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+#lista_input {
+  width: 80%;
+  height: 40px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+#lista_button {
+  font-family: 'Roboto', sans-serif;
+  width: 80px;
+  height: 40px;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  border: none;
+  margin-left: 15px;
+  color: green;
+  background-color: lightgreen;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+#lista_button:hover {
+  background-color: #1cba60;
+  color: lightgreen;
+  width: 90px;
+}
+
+#lista_ul {
+  background: #F2F6D9;
+  padding: 20px 30px;
+  border-radius: 30px 5px 30px 5px;
+  box-shadow: 3px 3px 8px #28383d;
+}
+
+#lista_ul:empty {
+  visibility: hidden;
+}
+
+.lista_item {
+  list-style: none;
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  font-size: 2em;
+  color: #F2F6D9;
+  padding: 10px;
+  margin: 3px 0;
+  background: linear-gradient(#84b0f5, #2674f0);
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.lista_item:hover {
+  background: #88B6B0;
+}
+
+.li_varinvaihto {
+  list-style: none;
+  text-align: center;
+  text-decoration: line-through;
+  font-size: 2em;
+  color: #F2F6D9;
+  padding: 10px;
+  margin: 10px 0;
+  background: linear-gradient(lightgreen, green);
+  border-radius: 5px;
+}
+
+.poistonappi {
+  float: right;
+  border: none;
+  font-size: 1em;
+  font-weight: bolder;
+  border-radius: 5px;
+  color: #ed5151;
+  background: none;
+  transition: 0.3s
+}
+
+.poistonappi:hover {
+  background-color: #ed5151;
+  color: black;
+}
+
+#poista_valmiit {
+  font-family: 'Roboto', sans-serif;
+  width: 180px;
+  height: 40px;
+  margin-top: 15px;
+  font-size: 1.2em;
+  font-weight: bolder;
+  border: none;
+  color: #06274C;
+  background-color: #eb6f4d;
+  transition: 0.5s;
+  border-radius: 3px;
+}
+
+#poista_valmiit:hover {
+  background-color: #ed5151;
+}
+
+footer {
+  background-color: #06274C;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3em;
+}
+
+#tekijat_div {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+dt {
+  color: lightgreen;
+  display: inline;
+  width: 100px;
+  padding: 3px;
+}
+
+dd {
+  color: lightblue;
+  display: inline;
+  margin: 0 15px 0 0;
+  padding: 3px;
+}
+/* Desktop resoluutio-osuus loppuu */
+
+/* Media query läppäri / pädi-resoluutioille */
+@media (max-width:1300px) {
+  header h1 {
+    margin-bottom: 15px;
+  }
+
+  #lista_input {
+    width: 100%;
+  }
+
+  #lista_button {
+    margin: 25px 0 10px 0;
+  }
+
+  #lista_div {
+    width: 90%;
+  }
+}
+/* Läppäri / pädi-resoluutio-osuus loppuu */
+
+/* Media query puhelinresoluutioille */
+@media (max-width:600px) {
+  #lista_div {
+    padding-top: 100px;
+    padding-bottom: 65px;
+  }
+
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  header p {
+    display: none;
+  }
+
+  dt {
+    margin: 0;
+    padding: 0;
+  }
+
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+}
+/* PUhelinresoluutio-osuus loppuu */
