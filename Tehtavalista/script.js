@@ -57,9 +57,9 @@ function lisaa() {
 var enter = document.getElementById('lista_input');
 
 //lisätään inputille eventlistener, joka kuuntelee napin painallusta kyseisen inputin kohdalla
-enter.addEventListener("keypress", function(enterNappi) {
+enter.addEventListener("keydown", function(event) {
   //määritetään nappi jonka painallusta halutaan kuunnella
-  if (enterNappi.key === "Enter") {
+  if (event.key === "Enter") {
     //määritetään asiat jotka halutaan tapahtuvan napin painalluksen jälkeen, eli buttonin clickkaus tässä tapauksessa
     document.getElementById('lista_button').click();
   }
