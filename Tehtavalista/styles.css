@@ -108,6 +108,28 @@ header p {
   transition: 0.3s
 }
 
+.donenappi {
+  float: bottom;
+  border: none;
+  font-size: 1em;
+  font-weight: bolder;
+  border-radius: 5px;
+  color: #ed5151;
+  background: none;
+  transition: 0.3s
+}
+
+.editnappi {
+  float: bottom;
+  border: none;
+  font-size: 1em;
+  font-weight: bolder;
+  border-radius: 5px;
+  color: #ed5151;
+  background: none;
+  transition: 0.3s
+}
+
 #poista_valmiit {
   font-family: 'Roboto', sans-serif;
   width: 180px;
@@ -171,6 +193,10 @@ dd {
   background-color: #ed5151;
   color: black;
   }
+}
+
+.uusvari {
+  color: #BCBC0F;
 }
 
 /* Media query läppäri / pädi-resoluutioille */

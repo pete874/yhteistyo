@@ -15,6 +15,7 @@ function lisaa() {
   // Tehdään muuttujat ul ja li elementeille
   var ul = document.getElementById('lista_ul');
   var li = document.createElement("li");
+  var p = document.createElement("p");
 
   // Muuttuja joka luo tekstisisällön "tehtava" muuttujan sisällön mukaan
   var taulukkoon = document.createTextNode(tehtava);
@@ -23,7 +24,8 @@ function lisaa() {
   ul.appendChild(li);
 
   //lisätään <li> elementin sisälle tekstiä, joka vastaa tässä tapauksessa input kenttään kirjoitettua tekstiä.
-  li.appendChild(taulukkoon);
+  li.appendChild(p);
+  p.appendChild(taulukkoon)
 
   //classin vaihto lista itemin värinvaihtoa varten
 
@@ -33,19 +35,41 @@ function lisaa() {
 
   //Tehdään muuttuja poistonapille
   var poistoNappi = document.createElement("button")
+  var editNappi = document.createElement("button")
+  var doneNappi = document.createElement("button")
 
   // Lisätään poistonapille ja li elementille classit, jotta niitä voidaan muokata CSS:ssä
   poistoNappi.setAttribute("class", "poistonappi")
   li.setAttribute("class", "lista_item")
+  p.setAttribute("class", "p_class")
 
   // Lisätään napille onclick attribuutti, joka poistaa parent elementin, eli <li> elementin
   poistoNappi.setAttribute("onclick", "parentElement.remove();")
+  editNappi.setAttribute("class", "editnappi")
+  doneNappi.setAttribute("class", "donenappi")
 
   // Lisätään napille tekstisisältö
   poistoNappi.textContent = "X";
+  editNappi.textContent = "✎";
+  doneNappi.textContent = "✓"
 
   // Lisätään poistonappi <li> elementin alle
   li.appendChild(poistoNappi);
+  li.appendChild(editNappi);
+  li.appendChild(doneNappi);
+
+  editNappi.addEventListener("click", function() {
+  p.contentEditable = true;
+  p.focus();
+  li.classList.toggle("li_varinvaihto");
+  doneNappi.classList.add("uusvari")
+ });
+
+  doneNappi.addEventListener("click", function() {
+    p.contentEditable = false;
+    li.classList.toggle("li_varinvaihto")
+    doneNappi.classList.remove("uusvari")
+  })
 }
 }
 
@@ -64,6 +88,7 @@ enter.addEventListener("keydown", function(event) {
     document.getElementById('lista_button').click();
   }
 })
+
 
 // Poistaa kaikki valmiit tehtävät
 function poistaValmiit() {
