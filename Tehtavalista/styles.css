@@ -1,5 +1,6 @@
 /* Desktop resoluutioille */
 body {
+  position: relative;
   margin: 0;
   min-height: 100vh;
   background: linear-gradient(to bottom, rgba(0, 102, 102, 0.5), rgba(0, 102, 102, 1));
@@ -87,6 +88,7 @@ header p {
 
 .lista_item p {
   display: inline-block;
+  width: 60%;
   padding: 0;
   margin: 0;
 }
@@ -116,6 +118,10 @@ header p {
   color: brown;
   background: none;
   transition: 0.3s;
+}
+
+.uusvari {
+  color: lightgreen;
 }
 
 .editnappi {
@@ -189,6 +195,7 @@ dd {
 }
 /* Desktop resoluutio-osuus loppuu */
 
+/* Media query - Minimileveys hover-ominaisuuksien toiminnalle */
 @media (min-width:1301px) {
   .lista_item:hover {
     background: #30b8ba;
@@ -210,17 +217,19 @@ dd {
   }
 }
 
-.uusvari {
-  color: #BCBC0F;
-}
 
-/* Media query läppäri / pädi-resoluutioille */
+/* Media query läppäri & pädi-resoluutioille */
 @media (max-width:1300px) {
-  header h1 {
-    margin-bottom: 15px;
+  header {
+    position: static;
+    padding: 10px 0;
   }
-  #lista_input {
-    width: 100%;
+  header h1 {
+    margin: auto;
+  }
+
+  header p {
+    display: none;
   }
 
   #lista_button {
@@ -228,34 +237,53 @@ dd {
   }
 
   #lista_div {
+    padding-top: 25px;
     width: 90%;
   }
+
+  .lista_item  {
+    font-size: 1.5em;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
-/* Läppäri / pädi-resoluutio-osuus loppuu */
+/* Läppäri & pädi-resoluutio-osuus loppuu */
 
 /* Media query puhelinresoluutioille */
 @media (max-width:600px) {
   #lista_div {
-    padding-top: 100px;
+    padding-top: 35px;
     padding-bottom: 65px;
   }
 
   header h1 {
     font-size: 2.5em;
+    margin: 0 auto;
   }
 
-  header p {
-    display: none;
+  .lista_item  {
+    font-size: 1.5em;
   }
 
-  dt {
+  .editnappi {
+    margin-left: 0px;
+  }
+
+  .poistonappi {
+    margin: 0 5px 0 0;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 10px;
+  }
+
+  dt, dd {
     margin: 0;
     padding: 0;
   }
 
-  dd {
-    margin: 0;
-    padding: 0;
-  }
-}
 /* PUhelinresoluutio-osuus loppuu */
