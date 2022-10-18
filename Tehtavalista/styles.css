@@ -96,7 +96,7 @@ header p {
   text-align: center;
   font-size: 2em;
   color: #F2F6D9;
-  padding: 15px;
+  padding: 12px 0;
   margin: 5px 0;
   background: linear-gradient(lightgreen, green) !important;
   border-radius: 5px;
@@ -106,19 +106,6 @@ header p {
   text-decoration: line-through;
 }
 
-.poistonappi {
-  float: right;
-  display: inline;
-  border: none;
-  font-size: 1em;
-  font-weight: bolder;
-  border-radius: 5px;
-  color: #ed5151;
-  background: none;
-  transition: 0.3s;
-  margin bottom:
-}
-
 .donenappi {
   float: right;
   display: inline;
@@ -126,7 +113,7 @@ header p {
   font-size: 1em;
   font-weight: bolder;
   border-radius: 5px;
-  color: #ed5151;
+  color: brown;
   background: none;
   transition: 0.3s;
 }
@@ -134,13 +121,28 @@ header p {
 .editnappi {
   float: right;
   display: inline;
+  margin-left: 5px;
   border: none;
   font-size: 1em;
   font-weight: bolder;
   border-radius: 5px;
-  color: #ed5151;
+  color: brown;
   background: none;
   transition: 0.3s
+}
+
+.poistonappi {
+  float: right;
+  display: inline;
+  margin: 0 10px 0 5px;
+  border: none;
+  font-size: 1em;
+  font-weight: bolder;
+  border-radius: 5px;
+  color: brown;
+  background: none;
+  transition: 0.3s;
+  margin bottom:
 }
 
 #poista_valmiit {
