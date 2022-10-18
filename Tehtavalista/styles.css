@@ -79,29 +79,36 @@ header p {
   font-size: 2em;
   color: #F2F6D9;
   margin: 3px 0;
+  padding: 10px 0;
   background: linear-gradient(#84b0f5, #2674f0);
   border-radius: 5px;
   transition: 0.2s;
 }
 
 .lista_item p {
+  display: inline-block;
+  padding: 0;
   margin: 0;
 }
 
 .li_varinvaihto {
   list-style: none;
   text-align: center;
-  text-decoration: line-through;
   font-size: 2em;
   color: #F2F6D9;
-  padding: 5px;
+  padding: 15px;
   margin: 5px 0;
-  background: linear-gradient(lightgreen, green);
+  background: linear-gradient(lightgreen, green) !important;
   border-radius: 5px;
+}
+
+.li_varinvaihto p {
+  text-decoration: line-through;
 }
 
 .poistonappi {
   float: right;
+  display: inline;
   border: none;
   font-size: 1em;
   font-weight: bolder;
@@ -113,7 +120,8 @@ header p {
 }
 
 .donenappi {
-  float: bottom;
+  float: right;
+  display: inline;
   border: none;
   font-size: 1em;
   font-weight: bolder;
@@ -124,7 +132,8 @@ header p {
 }
 
 .editnappi {
-  float: bottom;
+  float: right;
+  display: inline;
   border: none;
   font-size: 1em;
   font-weight: bolder;
