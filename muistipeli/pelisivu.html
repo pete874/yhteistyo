@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="script.js">
+
+    </script>
     <meta charset="utf-8">
     <title>Muistipeli</title>
   </head>
   <body>
+
+    <!-- Header -->
+    <header class="header" id="header_id">
+      <h1>Pelisivusto</h1>
+      <h2>Suomen suurin pelisivusto</h2>
+
+      <!-- Headerin navigation bar-->
+      <nav class="navbar">
+        <a href="index.html" class="navbar_items">Etusivu</a>
+        <a href="pelisivu.html" class="navbar_items">Pelisivu</a>
+      </nav>
+    </header>
+
+    <!-- Main sisältö-->
+    <main class="main" id="main_id">
+
+      <h2>Muistipeli</h2>
+
+      <!-- Ruutujen määrän valinan dropdown boksi -->
+      <form>
+        <select class="pelivaihtoehdot" id="pelivaihtoehdot_id" onchange="ruudukko()">
+          <option value="">Valitse ruutujen määrä</option>
+          <option value="44">4x4</option>
+          <option value="46">4x6</option>
+          <option value="66">6x6</option>
+        </select>
+      </form>
+
+      <!-- Muistipelille div-->
+      <div class="muistipeli" id="muistipeli_id">
+        <div class="ruudukko" id="ruudukko">
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer_id">
+      <div id="tekijat_div">
+        <dl id="tekijat_dl">
+          <dt>Ville Saarinen:</dt>
+          <dd>Javascript</dd>
+          <dt>Petri Nurmi:</dt>
+          <dd>HTML</dd>
+          <dt>Iina Hakala:</dt>
+          <dd>CSS</dd>
+        </dl>
+      </div>
+    </footer>
 
   </body>
 </html>
