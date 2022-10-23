@@ -120,10 +120,6 @@ function onkoSamat() {
     kortit[valinta2].setAttribute('src', 'imgs/kuva0.png');
   }
 
-// Tyhjennetään valitutKortit-taulukko sekä valitutId-taulukko
-  valitutKortit = [];
-  valitutId = [];
-
   // Määritetään pelin läpäisyn vaatimukset eri ruudukoille
   var korttienMäärä = document.querySelectorAll('img').length;
 
@@ -135,4 +131,9 @@ function onkoSamat() {
   // Käynnistetään HTML-sivu uudestaan
     location.reload()
     }
+
+// Tyhjennetään valitutKortit-taulukko sekä valitutId-taulukko
+  valitutKortit = [];
+  valitutId = [];
+
 }
