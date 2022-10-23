@@ -2,9 +2,6 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="script.js">
-
-    </script>
     <meta charset="utf-8">
     <title>Muistipeli</title>
   </head>
@@ -29,7 +26,7 @@
 
       <!-- Ruutujen määrän valinan dropdown boksi -->
       <form>
-        <select class="pelivaihtoehdot" id="pelivaihtoehdot_id" onchange="ruudukko()">
+        <select class="pelivaihtoehdot" id="pelivaihtoehdot_id" onchange="kaynnista()">
           <option value="">Valitse ruutujen määrä</option>
           <option value="44">4x4</option>
           <option value="46">4x6</option>
@@ -58,6 +55,9 @@
         </dl>
       </div>
     </footer>
+    <script type="text/javascript" src="script.js">
+
+    </script>
 
   </body>
 </html>
