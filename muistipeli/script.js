@@ -1,31 +1,44 @@
 var cardsArray = [
   {name: 'kengät', img: 'imgs/kuva1.png'},
-  {name: 'kengät', img: 'imgs/kuva1.png'},
-  {name: 'vaunut', img: 'imgs/kuva2.png'},
   {name: 'vaunut', img: 'imgs/kuva2.png'},
   {name: 'pullo', img: 'imgs/kuva3.png'},
-  {name: 'pullo', img: 'imgs/kuva3.png'},
-  {name: 'ankka', img: 'imgs/kuva4.png'},
   {name: 'ankka', img: 'imgs/kuva4.png'},
   {name: 'jalat', img: 'imgs/kuva5.png'},
-  {name: 'jalat', img: 'imgs/kuva5.png'},
-  {name: 'lautanen', img: 'imgs/kuva6.png'},
   {name: 'lautanen', img: 'imgs/kuva6.png'},
   {name: 'hakaneula', img: 'imgs/kuva7.png'},
-  {name: 'hakaneula', img: 'imgs/kuva7.png'},
   {name: 'kauluri', img: 'imgs/kuva8.png'},
-  {name: 'kauluri', img: 'imgs/kuva8.png'},
-
+  {name: 'norsu', img: 'imgs/kuva9.png'},
+  {name: 'tiikeri', img: 'imgs/kuva10.png'},
+  {name: 'joulupukki', img: 'imgs/kuva11.png'},
+  {name: 'hiiri', img: 'imgs/kuva12.png'},
+  {name: 'hakaneula', img: 'imgs/kuva13.png'},
+  {name: 'kauluri', img: 'imgs/kuva14.png'},
+  {name: 'norsu', img: 'imgs/kuva15.png'},
+  {name: 'tiikeri', img: 'imgs/kuva16.png'},
+  {name: 'joulupukki', img: 'imgs/kuva17.png'},
+  {name: 'hiiri', img: 'imgs/kuva18.png'},
 ];
+cardsArray.sort(() => 0.5 - Math.random());
+
+var cardsArray44 = cardsArray.slice(0, 8);
+cardsArray44 = cardsArray44.concat(cardsArray44);
+cardsArray44.sort(() => 0.5 - Math.random());
+
+var cardsArray46 = cardsArray.slice(0, 12);
+cardsArray46 = cardsArray46.concat(cardsArray46);
+cardsArray46.sort(() => 0.5 - Math.random());
+
+var cardsArray66 = cardsArray.concat(cardsArray);
+cardsArray66.sort(() => 0.5 - Math.random());
 
 const peliRuudut = document.getElementById('ruudukko');
 var valitutKortit = [];
 var valitutId = [];
 var kortitMatch = [];
 
-cardsArray.sort(() => 0.5 - Math.random());
 
 function kaynnista() {
+
   var selectBox = document.getElementById('pelivaihtoehdot_id');
   var selected = selectBox.options[selectBox.selectedIndex].value
 
@@ -38,10 +51,12 @@ function kaynnista() {
   else {
     ruudukko66();
   }
+
 }
 
 // Funktio jolla luodaan ruudukko ja "tyhjät kortit" img-elementeillä
 function ruudukko44() {
+document.getElementById('ruudukko').innerHTML = "";
   // Käydään luupilla läpi kaikki kuvat
   for(let i = 0; i < 16; i++) {
     //Luodaan tyhjille kuville attribuutit (sijainti, data-id) sekä class ja klikkauksen kuuntelu
@@ -58,6 +73,7 @@ function ruudukko44() {
 }
 //Sama funktio, mutta img-elementtejä tulee 24
 function ruudukko46() {
+document.getElementById('ruudukko').innerHTML = "";
 
   for(let i = 0; i < 24; i++) {
 
@@ -67,12 +83,11 @@ function ruudukko46() {
     kortti.classList.add('kortit');
     kortti.addEventListener('click', naytaKortti)
     peliRuudut.appendChild(kortti);
-
   }
 }
 //Sama funktio, mutta img-elementtejä tulee 36
 function ruudukko66() {
-
+document.getElementById('ruudukko').innerHTML = "";
   for(let i = 0; i < 36; i++) {
 
     var kortti = document.createElement('img');
@@ -90,10 +105,21 @@ function naytaKortti() {
   // Haetaan uuteen muuttujaan korttien data-id
   var korttiId = this.getAttribute('data-id');
   // src-atribuutilla haetaan uuden kortin sijainti
-  this.setAttribute('src', cardsArray[korttiId].img);
-  // Työnnetään klikattu kortti nimen perusteella valitutKortit-taulukkomuuttujaan
-  valitutKortit.push(cardsArray[korttiId].name);
-  // Työnnetään klikatun (tyhjän kortin) id valitutId-taulukkomuuttujaan
+  var kuinkaMonta = document.querySelectorAll('.kortit').length;
+  if(kuinkaMonta == 16) {
+    this.setAttribute('src', cardsArray44[korttiId].img);
+    // Työnnetään klikattu kortti nimen perusteella valitutKortit-taulukkomuuttujaan
+    valitutKortit.push(cardsArray44[korttiId].name);
+    // Työnnetään klikatun (tyhjän kortin) id valitutId-taulukkomuuttujaan
+  }
+  else if(kuinkaMonta == 24) {
+    this.setAttribute('src', cardsArray46[korttiId].img);
+    valitutKortit.push(cardsArray46[korttiId].name);
+  }
+  else {
+    this.setAttribute('src', cardsArray66[korttiId].img);
+    valitutKortit.push(cardsArray66[korttiId].name);
+  }
   valitutId.push(korttiId);
   // Kahden valinnan jälkeen käynnistetään funktio onkoSamat. Lisätään 250ms viive.
   if(valitutKortit.length === 2) {
@@ -111,7 +137,7 @@ function onkoSamat() {
 //Mikäli samat, työnnetään kortitMatch-taulukkoon
   if(valitutKortit[0] === valitutKortit[1]) {
     alert('oikein!');
-    kortitMatch.push(valitutKortit)
+    kortitMatch.push(valitutKortit);
   }
 // Muussa tapauksessa palautetaan "tyhjä" kuva
   else {
@@ -127,7 +153,7 @@ function onkoSamat() {
      korttienMäärä === 24 && kortitMatch.length === 12 ||
      korttienMäärä === 36 && kortitMatch.length === 18) {
 
-    alert('Onneksi olkoon! Voitit!');
+    alert('Onneksi olkoon! Läpäisit pelin!');
   // Käynnistetään HTML-sivu uudestaan
     location.reload()
     }
