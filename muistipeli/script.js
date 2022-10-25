@@ -1,5 +1,5 @@
 // Luodaan taulukko ja sijoitetaan siihen objekteina käytetyt kuvat
-// Objektiin sijoitetaan kuvan nimi ja img src.
+// Objektiin sijoitetaan kuvan nimi(vapaavalintainen) ja img src.
 var cardsArray = [
   {name: 'kengat', img: 'imgs/kuva1.png'},
   {name: 'vaunut', img: 'imgs/kuva2.png'},
@@ -22,7 +22,11 @@ var cardsArray = [
 ];
 // Sekoitetaan taulukko
 cardsArray.sort(() => 0.5 - Math.random());
-// Luodaan jokaiselle ruudukkokoolle oma taulukkomuuttuja ja sekoitetaan ne vielä erikseen
+
+/*Luodaan jokaiselle ruudukkokoolle oma taulukkomuuttuja.
+  - Määritetään slice-komennolla kuinka monta kuvaa kyseiseen peliruudukkoon tulee.
+  - Sekoitetaan nämä taulukot vielä erikseen.
+*/
 var cardsArray44 = cardsArray.slice(0, 8);
 cardsArray44 = cardsArray44.concat(cardsArray44);
 cardsArray44.sort(() => 0.5 - Math.random());
@@ -34,10 +38,10 @@ cardsArray46.sort(() => 0.5 - Math.random());
 var cardsArray66 = cardsArray.concat(cardsArray);
 cardsArray66.sort(() => 0.5 - Math.random());
 
-// Haetaan pelialue id:llä HTML:stä ja tallennetaan muuttujaan
+// Haetaan pelialue id:n perusteella HTML:stä ja tallennetaan muuttujaan
 const peliRuudut = document.getElementById('ruudukko');
 /* Luodaan globaalit muuttujat, joihin tullaan tallentamaan:
-    - Valitut kortit nimen perusteella
+    - Valitut kortit nimen perusteella(käytetään korttiparien löytämiseen)
     - Valittujen korttien data-id-numero
     - Löydetyt korttiparit
 */
@@ -45,9 +49,10 @@ var valitutKortit = [];
 var valitutId = [];
 var kortitMatch = [];
 
-
+// Funktio jolla valitaan haluttu ruudukko
 function kaynnista() {
-
+/* Haetaan HTML:stö pudotusvalikko id:n perusteella. Syötetään omaan muuttujaan
+   optionien arvo */
   var selectBox = document.getElementById('pelivaihtoehdot_id');
   var selected = selectBox.options[selectBox.selectedIndex].value
 
@@ -121,7 +126,6 @@ function naytaKortti() {
     this.setAttribute('src', cardsArray44[korttiId].img);
     // Työnnetään klikattu kortti nimen perusteella valitutKortit-taulukkomuuttujaan
     valitutKortit.push(cardsArray44[korttiId].name);
-    // Työnnetään klikatun (tyhjän kortin) id valitutId-taulukkomuuttujaan
   }
   else if(kuinkaMonta == 24) {
     this.setAttribute('src', cardsArray46[korttiId].img);
@@ -131,6 +135,7 @@ function naytaKortti() {
     this.setAttribute('src', cardsArray66[korttiId].img);
     valitutKortit.push(cardsArray66[korttiId].name);
   }
+  // Työnnetään klikatun (tyhjän kortin) id valitutId-taulukkomuuttujaan
   valitutId.push(korttiId);
   // Kahden valinnan jälkeen käynnistetään funktio onkoSamat. Lisätään 250ms viive.
   if(valitutKortit.length === 2) {
