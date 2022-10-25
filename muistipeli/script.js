@@ -1,5 +1,7 @@
+// Luodaan taulukko ja sijoitetaan siihen objekteina käytetyt kuvat
+// Objektiin sijoitetaan kuvan nimi ja img src.
 var cardsArray = [
-  {name: 'kengät', img: 'imgs/kuva1.png'},
+  {name: 'kengat', img: 'imgs/kuva1.png'},
   {name: 'vaunut', img: 'imgs/kuva2.png'},
   {name: 'pullo', img: 'imgs/kuva3.png'},
   {name: 'ankka', img: 'imgs/kuva4.png'},
@@ -12,14 +14,15 @@ var cardsArray = [
   {name: 'joulupukki', img: 'imgs/kuva11.png'},
   {name: 'hiiri', img: 'imgs/kuva12.png'},
   {name: 'hakaneula', img: 'imgs/kuva13.png'},
-  {name: 'kauluri', img: 'imgs/kuva14.png'},
-  {name: 'norsu', img: 'imgs/kuva15.png'},
-  {name: 'tiikeri', img: 'imgs/kuva16.png'},
-  {name: 'joulupukki', img: 'imgs/kuva17.png'},
-  {name: 'hiiri', img: 'imgs/kuva18.png'},
+  {name: 'koira', img: 'imgs/kuva14.png'},
+  {name: 'yksisarvinen', img: 'imgs/kuva15.png'},
+  {name: 'mehilainen', img: 'imgs/kuva16.png'},
+  {name: 'kanat', img: 'imgs/kuva17.png'},
+  {name: 'pupu', img: 'imgs/kuva18.png'},
 ];
+// Sekoitetaan taulukko
 cardsArray.sort(() => 0.5 - Math.random());
-
+// Luodaan jokaiselle ruudukkokoolle oma taulukkomuuttuja ja sekoitetaan ne vielä erikseen
 var cardsArray44 = cardsArray.slice(0, 8);
 cardsArray44 = cardsArray44.concat(cardsArray44);
 cardsArray44.sort(() => 0.5 - Math.random());
@@ -31,7 +34,13 @@ cardsArray46.sort(() => 0.5 - Math.random());
 var cardsArray66 = cardsArray.concat(cardsArray);
 cardsArray66.sort(() => 0.5 - Math.random());
 
+// Haetaan pelialue id:llä HTML:stä ja tallennetaan muuttujaan
 const peliRuudut = document.getElementById('ruudukko');
+/* Luodaan globaalit muuttujat, joihin tullaan tallentamaan:
+    - Valitut kortit nimen perusteella
+    - Valittujen korttien data-id-numero
+    - Löydetyt korttiparit
+*/
 var valitutKortit = [];
 var valitutId = [];
 var kortitMatch = [];
@@ -69,6 +78,7 @@ document.getElementById('ruudukko').innerHTML = "";
     // Upotetaan tyhjät kortit eli 16 x kuva0.png HTML- divin (ruudukko) sisään
     peliRuudut.appendChild(kortti);
 
+
   }
 }
 //Sama funktio, mutta img-elementtejä tulee 24
@@ -100,13 +110,14 @@ document.getElementById('ruudukko').innerHTML = "";
   }
 }
 
-// Funktio jolla paljastetaan kuvakortit
+// Funktio, jolla paljastetaan kuvakortit
 function naytaKortti() {
   // Haetaan uuteen muuttujaan korttien data-id
   var korttiId = this.getAttribute('data-id');
-  // src-atribuutilla haetaan uuden kortin sijainti
   var kuinkaMonta = document.querySelectorAll('.kortit').length;
+
   if(kuinkaMonta == 16) {
+    // src-atribuutilla syötetään paljastettavan kortin sijainti
     this.setAttribute('src', cardsArray44[korttiId].img);
     // Työnnetään klikattu kortti nimen perusteella valitutKortit-taulukkomuuttujaan
     valitutKortit.push(cardsArray44[korttiId].name);
@@ -134,8 +145,8 @@ function onkoSamat() {
   // valinta 1&2:een syötetään valitutId-taulukon ensimmäinen ja toinen arvo
   var valinta1 = valitutId[0];
   var valinta2 = valitutId[1];
-//Mikäli samat, työnnetään kortitMatch-taulukkoon
-  if(valitutKortit[0] === valitutKortit[1]) {
+//Jos kortit ovat nimen perusteella samat, mutta data-Id:n perusteella eri, työnnetään kortitMatch-taulukkoon
+  if(valitutKortit[0] === valitutKortit[1] && valitutId[0] != valitutId[1]) {
     alert('oikein!');
     kortitMatch.push(valitutKortit);
   }
@@ -153,7 +164,7 @@ function onkoSamat() {
      korttienMäärä === 24 && kortitMatch.length === 12 ||
      korttienMäärä === 36 && kortitMatch.length === 18) {
 
-    alert('Onneksi olkoon! Läpäisit pelin!');
+    alert('Läpäisit pelin! Mahtava suoritus!');
   // Käynnistetään HTML-sivu uudestaan
     location.reload()
     }
