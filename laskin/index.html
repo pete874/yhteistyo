@@ -2,9 +2,6 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="script.js">
-
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
@@ -13,30 +10,35 @@
   </head>
   <body>
 
-    <div class="div-container">
-      <textarea rows="4" cols="11" id="naytto" disabled></textarea>
+    <div class="div-container" id="div-container">
+      <div class="naytto-container" id="naytto">
+        <textarea value="" rows="2" cols="11" id="naytto_1" disabled></textarea>
+        <textarea rows="2" cols="11" id="naytto_2" disabled></textarea>
+      </div>
 
       <button type="button" name="button" value="ac" onclick="tyhjennys()">C</button>
       <button type="button" name="button" value="c" onclick="poisto()">CE</button>
-      <button type="button" name="button" value="%" onclick="lisays('%')">%</button>
-      <button type="button" name="button" value="/" onclick="lisays('/')">/</button>
+      <button type="button" id="jakoj" name="button" value="%" onclick="lisays('%')">%</button>
+      <button type="button" id="jako" name="button" value="/" onclick="lisays('/')">/</button>
       <button type="button" name="button" value="7" onclick="lisays('7')">7</button>
       <button type="button" name="button" value="8" onclick="lisays('8')">8</button>
       <button type="button" name="button" value="9" onclick="lisays('9')">9</button>
-      <button type="button" name="button" value="*" onclick="lisays('*')">*</button>
+      <button type="button" id="kerto" name="button" value="*" onclick="lisays('*')">*</button>
       <button type="button" name="button" value="4" onclick="lisays('4')">4</button>
       <button type="button" name="button" value="5" onclick="lisays('5')">5</button>
       <button type="button" name="button" value="6" onclick="lisays('6')">6</button>
-      <button type="button" name="button" value="-" onclick="lisays('-')">-</button>
+      <button type="button" id="miinus" name="button" value="-" onclick="lisays('-')">-</button>
       <button type="button" name="button" value="1" onclick="lisays('1')">1</button>
       <button type="button" name="button" value="2" onclick="lisays('2')">2</button>
       <button type="button" name="button" value="3" onclick="lisays('3')">3</button>
-      <button type="button" name="button" value="+" onclick="lisays('+')">+</button>
+      <button type="button" id="plus" name="button" value="+" onclick="lisays('+')">+</button>
       <button type="button" name="button" class="leveanappi" value="0" onclick="lisays('0')">0</button>
-      <button type="button" name="button" value="," onclick="lisays('.')">,</button>
-      <button type="button" name="button" value="=" onclick="yht()">=</button>
+      <button type="button" id="piste" name="button" value="," onclick="lisays('.')">.</button>
+      <button type="button" id="enter" name="button" value="=" onclick="yht()">=</button>
 
     </div>
+    <script type="text/javascript" src="script.js">
 
+    </script>
   </body>
 </html>

@@ -28,6 +28,8 @@ body {
 
 
 #naytto {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
   font-family: 'Orbitron', sans-serif;
   background-image: url("battery-charging.svg");
   background-size: 30px 50px;
@@ -35,6 +37,7 @@ body {
   background-position: top right;
   font-size: 35px;
   grid-column: 1/5;
+  grid-gap: 30px;
   border-radius: 20px;
   background-color: lightgrey;
   box-shadow: 1px 4px black;
@@ -49,6 +52,30 @@ body {
 #naytto:focus {
   outline:none;
   border: none;
+}
+
+#naytto_1 {
+
+  font-family: 'Orbitron', sans-serif;
+  font-size: 35px;
+  resize: none;
+  border: none;
+  background-color: lightgrey;
+  overflow: hidden;
+
+}
+
+#naytto_2 {
+  background-image: url("battery-charging.svg");
+  background-size: 30px 50px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  resize:none;
+  border: none;
+  background-color: lightgrey;
+  overflow: visible;
 }
 
 button {
