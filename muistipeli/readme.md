@@ -1,1 +1,2 @@
-# Yleistä projektista
+# Yleistä jargonia
+  blaa blaa
