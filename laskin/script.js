@@ -27,23 +27,14 @@ function lisays(luku) {
 }
 
 function yht() {
-  document.getElementById('jakoj').disabled = true;
-  document.getElementById('jako').disabled = true;
-  document.getElementById('kerto').disabled = true;
-  document.getElementById('miinus').disabled = true;
-  document.getElementById('plus').disabled = true;
-  document.getElementById('piste').disabled = true;
-  document.getElementById('enter').disabled = true;
-
   document.getElementById('naytto_2').value += numero + "=" + "\r\n" + eval(numero) + "\r\n";
   numero = eval(numero);
-  numero = "";
   document.getElementById('naytto_1').value = numero;
 }
 
 function poisto() {
   if (numero.length >= 0) {
-  numero = numero.replace(/\d+$/,'');
+  numero = numero.slice(0, -1);
   document.getElementById('naytto_1').value = numero;
   }
 }
@@ -56,7 +47,7 @@ function tyhjennys() {
   document.getElementById('plus').disabled = true;
   document.getElementById('piste').disabled = true;
   document.getElementById('enter').disabled = true;
-  
+
   numero = "";
   document.getElementById("naytto_1").value = numero;
   document.getElementById('naytto_2').value = numero;
