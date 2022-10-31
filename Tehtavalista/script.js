@@ -8,6 +8,8 @@ function lisaa() {
   // Tarkastetaan onko input kenttään syötetty mitään. Jos kenttä on tyhjä, mitään ei syötetä listaan.
   if (!tehtava == "") {
 
+
+
   //input kentän tyhjennys lisää napin painalluksen jälkeen
   document.getElementById('lista_input').value = '';
 
@@ -57,6 +59,9 @@ function lisaa() {
   li.appendChild(poistoNappi);
   li.appendChild(editNappi);
   li.appendChild(doneNappi);
+
+  window.localStorage.setItem("tehtava", document.getElementById('li'))
+  console.log(localStorage)
 
   editNappi.addEventListener("click", function() {
   p.contentEditable = true;

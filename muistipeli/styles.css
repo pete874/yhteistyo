@@ -94,23 +94,23 @@ form option, select {
   text-align: center;
 
 }
-#ruudukko {
+#ruudukko44 {
 
   /*border: 5px solid aqua; /**/
 
-  height: 74vh;     /* tämä pitää kortit aisoissa ainakin ilman gridiä */
-  padding:5%;
-  display: flex; /*Kokeilin käyttää kuviin alkuun näitä, nyt grid on työn alla*/
-  flex-direction:column; /* Tää vaikuttaa toimivan paremmin tähän suuntaan */
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items:center;
+       /* tämä pitää kortit aisoissa ainakin ilman gridiä */
+
+  display: grid; /*Kokeilin käyttää kuviin alkuun näitä, nyt grid on työn alla*/
+  grid-template-columns: repeat(4, 120px);
+  grid-gap: 20px;
+  margin: auto;
+  justify-content: center;
 }
 
 img.kortit {
 
-  width: 7%;
-  max-width: 100px;
+
+  max-width: 120px
 }
 
 footer {

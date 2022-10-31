@@ -39,7 +39,9 @@ var cardsArray66 = cardsArray.concat(cardsArray);
 cardsArray66.sort(() => 0.5 - Math.random());
 
 // Haetaan pelialue id:n perusteella HTML:stä ja tallennetaan muuttujaan
-const peliRuudut = document.getElementById('ruudukko');
+const peliRuudut1 = document.getElementById('ruudukko44');
+const peliRuudut2 = document.getElementById('ruudukko46');
+const peliRuudut3 = document.getElementById('ruudukko66');
 /* Luodaan globaalit muuttujat, joihin tullaan tallentamaan:
     - Valitut kortit nimen perusteella(käytetään korttiparien löytämiseen)
     - Valittujen korttien data-id-numero
@@ -57,12 +59,18 @@ function kaynnista() {
   var selected = selectBox.options[selectBox.selectedIndex].value
 
   if (selected == 44) {
+    document.getElementById('ruudukko46').innerHTML = "";
+    document.getElementById('ruudukko66').innerHTML = "";
     ruudukko44();
   }
   else if (selected == 46) {
+    document.getElementById('ruudukko44').innerHTML = "";
+    document.getElementById('ruudukko66').innerHTML = "";
     ruudukko46();
   }
   else {
+    document.getElementById('ruudukko46').innerHTML = "";
+    document.getElementById('ruudukko44').innerHTML = "";
     ruudukko66();
   }
 
@@ -70,7 +78,7 @@ function kaynnista() {
 
 // Funktio jolla luodaan ruudukko ja "tyhjät kortit" img-elementeillä
 function ruudukko44() {
-document.getElementById('ruudukko').innerHTML = "";
+document.getElementById('ruudukko44').innerHTML = "";
   // Käydään luupilla läpi kaikki kuvat
   for(let i = 0; i < 16; i++) {
     //Luodaan tyhjille kuville attribuutit (sijainti, data-id) sekä class ja klikkauksen kuuntelu
@@ -81,14 +89,14 @@ document.getElementById('ruudukko').innerHTML = "";
     kortti.classList.add('kortit');
     kortti.addEventListener('click', naytaKortti)
     // Upotetaan tyhjät kortit eli 16 x kuva0.png HTML- divin (ruudukko) sisään
-    peliRuudut.appendChild(kortti);
+    peliRuudut1.appendChild(kortti);
 
 
   }
 }
 //Sama funktio, mutta img-elementtejä tulee 24
 function ruudukko46() {
-document.getElementById('ruudukko').innerHTML = "";
+document.getElementById('ruudukko46').innerHTML = "";
 
   for(let i = 0; i < 24; i++) {
 
@@ -97,12 +105,12 @@ document.getElementById('ruudukko').innerHTML = "";
     kortti.setAttribute('data-id', i);
     kortti.classList.add('kortit');
     kortti.addEventListener('click', naytaKortti)
-    peliRuudut.appendChild(kortti);
+    peliRuudut2.appendChild(kortti);
   }
 }
 //Sama funktio, mutta img-elementtejä tulee 36
 function ruudukko66() {
-document.getElementById('ruudukko').innerHTML = "";
+document.getElementById('ruudukko66').innerHTML = "";
   for(let i = 0; i < 36; i++) {
 
     var kortti = document.createElement('img');
@@ -110,7 +118,7 @@ document.getElementById('ruudukko').innerHTML = "";
     kortti.setAttribute('data-id', i);
     kortti.classList.add('kortit');
     kortti.addEventListener('click', naytaKortti)
-    peliRuudut.appendChild(kortti);
+    peliRuudut3.appendChild(kortti);
 
   }
 }
