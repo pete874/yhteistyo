@@ -120,7 +120,8 @@ form option, select {
 }
 
 .ruudukko {
-  padding:10%;
+  justify-content: center;
+
 }
 
 #ruudukko44 {
@@ -128,10 +129,10 @@ form option, select {
   /*border: 5px solid aqua; /**/
 
        /* tämä pitää kortit aisoissa ainakin ilman gridiä */
-
+  width: 100%;
   display: grid; /*Kokeilin käyttää kuviin alkuun näitä, nyt grid on työn alla*/
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 10px;
   margin: auto;
   justify-content: center;
 }
@@ -153,15 +154,19 @@ form option, select {
        /* tämä pitää kortit aisoissa ainakin ilman gridiä */
 
   display: grid; /*Kokeilin käyttää kuviin alkuun näitä, nyt grid on työn alla*/
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 120px);
   grid-gap: 20px;
   margin: auto;
   justify-content: center;
 }
-img.kortit {
 
-  width:;
-  max-width: 120px
+#muistipeli_id {
+    max-width: 720px;
+    margin: auto;
+}
+
+img.kortit {
+  max-width:95%;
 }
 
 footer {
