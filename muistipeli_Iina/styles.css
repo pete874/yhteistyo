@@ -132,7 +132,7 @@ form option, select {
   width: 100%;
   display: grid; /*Kokeilin käyttää kuviin alkuun näitä, nyt grid on työn alla*/
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  grid-gap: 5px;
   margin: auto;
   justify-content: center;
 }
@@ -141,7 +141,7 @@ form option, select {
   /*border: 5px solid aqua; /**/
 
        /* tämä pitää kortit aisoissa ainakin ilman gridiä */
-
+  width: 100%;
   display: grid; /*Kokeilin käyttää kuviin alkuun näitä, nyt grid on työn alla*/
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 5px;
@@ -152,7 +152,7 @@ form option, select {
   /*border: 5px solid aqua; /**/
 
        /* tämä pitää kortit aisoissa ainakin ilman gridiä */
-
+  width: 100%;
   display: grid; /*Kokeilin käyttää kuviin alkuun näitä, nyt grid on työn alla*/
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 5px;
