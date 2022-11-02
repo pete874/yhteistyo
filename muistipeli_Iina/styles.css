@@ -143,8 +143,8 @@ form option, select {
        /* tämä pitää kortit aisoissa ainakin ilman gridiä */
 
   display: grid; /*Kokeilin käyttää kuviin alkuun näitä, nyt grid on työn alla*/
-  grid-template-columns: repeat(6, 120px);
-  grid-gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 5px;
   margin: auto;
   justify-content: center;
 }#ruudukko66 {
@@ -154,8 +154,8 @@ form option, select {
        /* tämä pitää kortit aisoissa ainakin ilman gridiä */
 
   display: grid; /*Kokeilin käyttää kuviin alkuun näitä, nyt grid on työn alla*/
-  grid-template-columns: repeat(6, 120px);
-  grid-gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 5px;
   margin: auto;
   justify-content: center;
 }
