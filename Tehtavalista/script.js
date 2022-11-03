@@ -60,8 +60,6 @@ function lisaa() {
   li.appendChild(editNappi);
   li.appendChild(doneNappi);
 
-  window.localStorage.setItem("tehtava", document.getElementById('li'))
-  console.log(localStorage)
 
   editNappi.addEventListener("click", function() {
   p.contentEditable = true;
