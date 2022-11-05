@@ -9,15 +9,19 @@
     <title>Tapahtuma</title>
   </head>
   <body>
-    <header>
+    <header id="header_id">
       <h1>Otsikko 1</h1>
         <nav>
         <a href="#">Esittely</a>
-        <a href="#">Ilmoittautumninen</a>
-        <a href="#">Yhteystiedot</a>
+        <a href="javascript:formiEsiin();">Ilmoittautumninen</a>
+        <a href="javascript:yhteystiedotEsiin();">Yhteystiedot</a>
       </nav>
       <h4>Tähän tulee alaotsikko</h4>
     </header>
+    <div class="form" id="form">
+      <button type="button" name="button" onclick="poistaClass()">X</button>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
     <main id="main_content">
       <section class="section_kuva" id="section_1">
       </section>
