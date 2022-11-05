@@ -21,6 +21,20 @@ header {
   z-index: 1;
 }
 
+.header_esilla {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 50px 50px;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  top: 0px !important;
+  transition: 0.2s;
+  z-index: 1;
+
+}
+
 nav {
   margin-top: 65px;
 }
@@ -28,6 +42,8 @@ nav {
 a {
   margin-left: 25px;
 }
+
+/* ----------------------- */
 
 .form {
   display: block;
@@ -52,9 +68,9 @@ a {
   position: fixed;
   background-color: lightgrey;
   width: 40%;
-  height: 50%;
+  height: 600px;
   border-radius: 10px;
-  top: 480px;
+  top: 420px;
   transition: 0.5s;
   opacity: 0.9;
   z-index: 0;

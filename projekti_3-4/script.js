@@ -11,15 +11,18 @@ var headerNykyPaikka = window.pageYOffset;
   headerEdellinenPaikka = headerNykyPaikka;
 }
 
-
 // Ilmottaumis div esiin ja pois klikkaamalla ilmottautuminen linkkiä headerissä
 function formiEsiin() {
   var form = document.getElementById("form");
+  var header = document.getElementById('header_id')
   form.classList.toggle("form_esilla");
+  header.classList.toggle("header_esilla")
 }
 
 //ilmottautumis divin sisällä oleva X painike, joka poistaa formin näkyvistä
 function poistaClass() {
   var form = document.getElementById('form')
+  var header = document.getElementById('header_id')
   form.classList.remove("form_esilla");
+  header.classList.remove("header_esilla")
 }
