@@ -4,7 +4,7 @@ body {
   height: 100vh;
   font-size: 14px;
   z-index: -1;
-
+  margin: 0;
 }
 
 /* Header alkaa*/
@@ -88,42 +88,59 @@ button {
 
 /* Kuva sectionit */
 
-.section_kuva{
-  border-radius: 10px;
-}
 
 #section_1 {
-  background-image: url("imgs/backgroundDj.jpg");
+  display: flex;
+  background-image: url("imgs/background1.jpg");
+  align-items: center;
   background-attachment: fixed;
-  height: 400px;
+  height: 100vh;
   width: 100%;
   margin-top: 100px;
-
+  background-size: cover;
   background-repeat: no-repeat;
+}
+
+.intro_title{
+  color: black;
+  background-color: white;
+  font-family: 'Cinzel', serif;
+  margin: auto;
+  font-size: 2em;
+  text-shadow: 8px 4px 15px white;
+  opacity: 80%;
+  box-shadow: 2px 2px 20px 10px white;
+  border-radius: 25px 5px 25px 5px;
+  padding: 0px 15px;
+}
+
+#section_2 {
+  display: flex;
+  align-items: center;
+  background-image: url("imgs/background2grey.jpg");
+  background-attachment: fixed;
+  height: 50vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #section_3 {
-  background-image: url("imgs/background2.jpg");
+  display: flex;
+  align-items: center;
+  background-image: url("imgs/background4grey.jpg");
   background-attachment: fixed;
-  height: 700px;
+  height: 50vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#section_5 {
-  background-image: url("imgs/background3.jpg");
+#section_4 {
+  display: flex;
+  background-image: url("imgs/background6.jpg");
   background-attachment: fixed;
-  height: 500px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#section_7 {
-  background-image: url("imgs/background4.jpg");
-  background-attachment: fixed;
-  height: 700px;
+  height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -131,11 +148,13 @@ button {
 
 /* ----------------------- */
 
-/* Välisectionit */
+/* Border div */
 
-.section_content {
+.border {
   width: 100%;
-  height: 50px;
+  height: 3px;
+  margin: 0;
+  background: white;
 }
 
 /* ----------------------- */
@@ -146,15 +165,20 @@ button {
   margin: auto;
   font-size: 1.5em;
   text-align: center;
-  background-color: white;
+  background-color: #f7f7f5;
   width: 33%;
-  height: 100%;
+  height: 90%;
+  border-radius: 15px;
 }
 
 #article_1 h3 {
-padding-top: 35%;
+padding-top: 8%
 }
 
 #article_2 h3 {
-padding-top: 15%;
+padding-top: 4%;
+}
+
+.article p {
+  padding: 0px 40px;
 }
