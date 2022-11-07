@@ -72,6 +72,7 @@ a:hover {
 .form {
   display: block;
   position: fixed;
+  font-family: 'Bebas Neue', cursive;
   background-color: #A9A9A9;
   width: 30%;
   height: 60%;
@@ -90,11 +91,12 @@ a:hover {
 .form_esilla {
   display: block;
   position: fixed;
+  font-family: 'Bebas Neue', cursive;
   background-color: #A9A9A9;
   width: 30%;
   height: 60%;
   border-radius: 10px;
-  top: 505px;
+  top: 500px;
   transition: 0.5s;
   opacity: 0.9;
   z-index: 1;
