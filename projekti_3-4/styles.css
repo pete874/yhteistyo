@@ -194,6 +194,14 @@ textarea {
   padding: 0px 15px;
 }
 
+#intro_title {
+  position: relative;
+}
+
+#outro_title {
+  position: relative;
+}
+
 #section_2 {
   display: flex;
   align-items: center;
