@@ -8,22 +8,66 @@
     <script type="text/javascript" src="script.js">
 
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <title>Tapahtuma</title>
   </head>
   <body>
     <header id="header_id">
-      <h1>Otsikko 1</h1>
+      <h1 id="header_otsikko">Glow Festival</h1>
         <nav>
-        <a href="#">Esittely</a>
-        <a href="javascript:formiEsiin();">Ilmoittautumninen</a>
-        <a href="#section_4">Yhteystiedot</a>
+        <a href="javascript:formiEsiin();">Ilmottautuminen</a>
       </nav>
-      <h4>Tähän tulee alaotsikko</h4>
     </header>
     <div class="form" id="form">
-      <button type="button" name="button" onclick="poistaClass()">X</button>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button class="form_kiinni" type="button" name="button" onclick="poistaClass()"><b>X</b></button>
+      <h2>Täytä tiedot</h2>
+      <form class="" action="index.html" method="post">
+        <div class="tekstikentat">
+          <label for="sukunimi">Sukunimi : </label>
+          <input type="text" name="sukunimi" value="" id="sukunimi">
+          <label for="sukunimi">Etunimi : </label>
+          <input type="text" name="etunimi" value="" id="etunimi">
+          <label for="osoite">Syötä Osoitetiedot : </label>
+          <input type="text" name="osoite" value="" placeholder="Kadun nimi" id="kadun_nimi"><br>
+          <input type="text" name="" value="" placeholder="Talon ja asunnon numero" id="talon_numero"><br>
+          <input type="text" name="" value="" placeholder="Postinumero" id="postinumero"><br>
+          <input type="text" name="" value="" placeholder="Maa" id="maa">
+          <label for="puhelin">Puhelin : </label>
+          <input type="text" name="puhelin" value="" id="puhelin">
+          <label for="email">Sähköposti : </label>
+          <input type="text" name="email" value="" id="email">
+          <label for="tyonantaja">Työnantaja tai Oppilaitos</label>
+          <input type="text" name="tyonantaja" value="" id="tyonantaja">
+          <label for="ammattinimike">Ammattinimike (tai opiskelija) : </label>
+          <input type="text" name="ammattinimike" value="" id="ammattinimike">
+          <label for="syntymaaika">Syntymäaika : </label>
+          <input type= "date" name="" value="" id="syntymaaika">
+
+        </div>
+         <h3>Hintavaihtoehdot : </h3>
+        <div class="radio_btns">
+            <input type="radio" name="vip" value="">
+            <label for="vip">VIP Premium 550€</label>
+            <input type="radio" name="vip" value="">
+            <label for="vip">Premium 320€</label>
+            <input type="radio" name="vip" value="">
+            <label for="vip">Tavallinen 120€</label>
+          </div>
+
+        <div class="textarea">
+          <label for="ruokavalio">Erikoisruokavalio :</label>
+          <textarea name="name" rows="5" cols="40" id="ruokavalio"></textarea>
+          <label for="lisatietoja">Lisätietoja :</label>
+          <textarea name="lisatietoja" rows="5" cols="40" id="lisatietoja"></textarea>
+
+        </div>
+        <button type="submit" name="button" id="submit">Lähetä</button>
+
+
+      </form>
     </div>
     <main id="main_content">
       <section class="section_kuva" id="section_1">
