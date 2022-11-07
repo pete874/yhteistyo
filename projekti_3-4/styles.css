@@ -43,7 +43,7 @@ header {
 }
 
 #header_otsikko {
-  font-family: 'Rubik Bubbles', cursive;
+  font-family: 'Bebas Neue', cursive;
   margin-left: 0px;
   font-size: 50px;
 }
@@ -53,8 +53,8 @@ nav {
 }
 
 a {
-  font-family: 'Rubik Bubbles', cursive;
-  font-size: 30px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 25px;
   color: black;
   background-color: #FFC025;
   padding: 5px;
