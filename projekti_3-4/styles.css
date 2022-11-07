@@ -198,6 +198,7 @@ textarea {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 #section_3 {
@@ -209,6 +210,7 @@ textarea {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 #section_4 {
@@ -244,6 +246,14 @@ textarea {
   width: 33%;
   height: 80%;
   border-radius: 15px;
+}
+
+#article_1 {
+  position: relative;
+}
+
+#article_2 {
+  position: relative;
 }
 
 #article_1 h3 {
