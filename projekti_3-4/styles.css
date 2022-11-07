@@ -73,6 +73,7 @@ a:hover {
   display: block;
   position: fixed;
   font-family: 'Bebas Neue', cursive;
+  font-weight: bold;
   background-color: #A9A9A9;
   width: 30%;
   height: 60%;
@@ -92,6 +93,7 @@ a:hover {
   display: block;
   position: fixed;
   font-family: 'Bebas Neue', cursive;
+  font-weight: bold;
   background-color: #A9A9A9;
   width: 30%;
   height: 60%;
@@ -155,6 +157,7 @@ textarea {
 
 #submit {
   background-color: #DDE2E8;
+  font-family: 'Bebas Neue', cursive;
   border: none;
   border-radius: 5px;
   width: 100px;
