@@ -11,7 +11,7 @@ window.onscroll = function() {
   //outro titlen liikuttaminen
   var outroTitle = document.getElementById('outro_title')
   var outroTitleOffset = window.pageYOffset - 2780;
-  outroTitle.style.right = outroTitleOffset * 1.4 + "px";
+  outroTitle.style.right = outroTitleOffset * 2 + "px";
 
   //artikkelien liikutus
   var section2 = document.getElementById('article_1');
