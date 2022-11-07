@@ -17,10 +17,10 @@ window.onscroll = function() {
   var section2 = document.getElementById('article_1');
   var section2Offset = window.pageYOffset * 2.36;
   var section3 = document.getElementById('article_2');
-  var section3Offset = window.pageYOffset * 1.45;
+  var section3Offset = window.pageYOffset * 2.36;
 
   section2.style.right = (section2Offset - 2600) + "px";
-  section3.style.left = (section3Offset - 2610) + "px";
+  section3.style.left = (section3Offset - 4224) + "px";
 
 
   //headerin piilotus
