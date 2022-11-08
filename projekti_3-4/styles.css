@@ -189,7 +189,7 @@ textarea {
   font-size: 2em;
   text-shadow: 8px 4px 15px white;
   opacity: 80%;
-  box-shadow: 2px 2px 20px 10px white;
+  box-shadow: 5px 5px 60px 5px black;
   border-radius: 25px 5px 25px 5px;
   padding: 0px 15px;
 }
@@ -207,7 +207,7 @@ textarea {
   align-items: center;
   background-image: url("imgs/background2grey.jpg");
   background-attachment: fixed;
-  height: 50vh;
+  height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -219,7 +219,7 @@ textarea {
   align-items: center;
   background-image: url("imgs/background4grey.jpg");
   background-attachment: fixed;
-  height: 50vh;
+  height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -242,9 +242,9 @@ textarea {
 
 .border {
   width: 100%;
-  height: 3px;
+  height: 7px;
   margin: 0;
-  background: white;
+  background: linear-gradient(to bottom, white, black 50%, white);
 }
 
 /* ----------------------- */
@@ -257,8 +257,10 @@ textarea {
   text-align: center;
   background-color: #f7f7f5;
   width: 33%;
-  height: 80%;
+  height: 350px;
   border-radius: 15px;
+  box-shadow: 5px 5px 60px 5px black;
+
 }
 
 #article_1 {
