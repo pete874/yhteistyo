@@ -83,11 +83,10 @@ a:hover {
   background-color: #A9A9A9;
   width: 30%;
   height: 60%;
-  top: 28%;
+  top: -430px;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
-  top: -430px;
   transition: 0.5s;
   opacity: 0.9;
   z-index: 1;
@@ -102,7 +101,7 @@ a:hover {
   font-weight: bold;
   background-color: #A9A9A9;
   width: 30%;
-  height: 60%;
+  height: 800px;
   border-radius: 10px;
   top: 500px;
   transition: 0.5s;
