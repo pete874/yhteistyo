@@ -98,7 +98,7 @@ if (sukunimi.length < 2 || !regExNimet.test(sukunimi)) {
   return false;
 }
 else {
-  console.log(sukunimi.value)
+  console.log(sukunimi) 
 }
 if (etunimi.length < 2 || !regExNimet.test(etunimi)) {
   alert("Syötä kunnollinen etunimi!");
@@ -134,6 +134,13 @@ if(tyonantaja.length < 2) {
 }
 if(nimike.length < 2) {
   alert("Syötä ammattinimikkeesi!");
+  return false;
+}
+
+console.log(syntymaAika)
+
+if(syntymaAika.length < 1) {
+  alert("Syötä syntymäaikasi");
   return false;
 }
 
