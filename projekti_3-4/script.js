@@ -69,6 +69,9 @@ function poistaClass() {
   header.classList.remove("header_esilla")
 }
 
+
+
+
 //formin tarkistus
 function tarkistus(form) {
 var sukunimi = form.sukunimi.value;
@@ -98,7 +101,7 @@ if (sukunimi.length < 2 || !regExNimet.test(sukunimi)) {
   return false;
 }
 else {
-  console.log(sukunimi) 
+  console.log(sukunimi)
 }
 if (etunimi.length < 2 || !regExNimet.test(etunimi)) {
   alert("Syötä kunnollinen etunimi!");
@@ -175,4 +178,11 @@ else {
 
 
 
+}
+function attribuutti() {
+  var aikaNyt = new Date();
+  console.log(aikaNyt);
+  var maxAika = aikaNyt.getFullYear() + "-" + ("0" + (aikaNyt.getMonth() + 1)).slice(-2) + "-" + ("0" + aikaNyt.getDate()).slice(-2);
+  console.log(maxAika);
+  document.getElementById('syntymaaika').setAttribute("max", maxAika);
 }
