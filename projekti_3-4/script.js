@@ -68,3 +68,104 @@ function poistaClass() {
   form.classList.remove("form_esilla");
   header.classList.remove("header_esilla")
 }
+
+//formin tarkistus
+function tarkistus(form) {
+var sukunimi = form.sukunimi.value;
+var etunimi = form.etunimi.value;
+var katuosoite = form. katu.value;
+var asNumero = form.asnumero.value;
+var postiNumero = form.pnumero.value;
+var maa = form.maa.value;
+var puhelin = form.puhelin.value;
+var email = form.email.value;
+var tyonantaja = form.tyonantaja.value;
+var nimike = form.ammattinimike.value;
+var syntymaAika = form.date.value;
+var radioButtons = form.querySelector('input[name="vip"]:checked');
+
+// Regex-ehdot
+var regExNimet = /^[A-Za-z]+$/;
+var regExNumerot = /^[0-9]+$/;
+var regExEmail = /\S+@\S+\.+\S/;
+var regExDate = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+
+
+// Tarkastetaan tiedot
+
+if (sukunimi.length < 2 || !regExNimet.test(sukunimi)) {
+  alert("Syötä kunnollinen sukunimi!");
+  return false;
+}
+else {
+  console.log(sukunimi.value)
+}
+if (etunimi.length < 2 || !regExNimet.test(etunimi)) {
+  alert("Syötä kunnollinen etunimi!");
+  return false;
+}
+if (katuosoite.length < 5 || !regExNimet.test(katuosoite)) {
+  alert("Syötä kunnollinen kadun nimi!");
+  return false;
+}
+if (asNumero.length < 1 || !regExNumerot.test(asNumero)) {
+  alert("Syötä asunnon numero!");
+  return false;
+}
+if (postiNumero.length != 5 || !regExNumerot.test(postiNumero)) {
+  alert("Syötä oikea postinumero!");
+  return false;
+}
+if (maa.length < 3 || !regExNimet.test(maa)) {
+  alert("Syötä asuinmaasi");
+  return false;
+}
+if (!regExNumerot.test(puhelin)) {
+  alert("Syötä puhelinnumerosi");
+  return false;
+}
+if (!regExEmail.test(email)) {
+  alert("Syötä kunnollinen sähköpostiosoite!");
+  return false;
+}
+if(tyonantaja.length < 2) {
+  alert("Syötä työnantajan tai oppilaitoksen nimi!");
+  return false;
+}
+if(nimike.length < 2) {
+  alert("Syötä ammattinimikkeesi!");
+  return false;
+}
+
+// Tätä en ole saanut toimimaan. En tiedä tuleeko inputista value-arvoa ollenkaan
+/*
+if (!regExDate.test(regExDate)) {
+  alert("Syötä syntymäaikasi")
+  return false;
+  console.log(syntymaAika.value)
+}
+else {
+  alert("kiitos")
+  console.log(syntymaAika.value)
+}
+*/
+
+if (radioButtons == null) {
+  alert("Valitse jokin vaihtoehto!");
+  return false;
+}
+
+else {
+  alert("Kiitos osallistumisesta! Saat hetken kuluttua vahvistuksen sähköpostiisi.");
+}
+
+
+
+
+
+
+
+
+
+
+}

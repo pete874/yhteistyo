@@ -27,17 +27,17 @@
     <div class="form" id="form">
       <button class="form_kiinni" type="button" name="button" onclick="poistaClass()"><b>X</b></button>
       <h2>Täytä tiedot</h2>
-      <form class="" action="index.html" method="post">
+      <form class="" action="index.html" method="post" onsubmit="return tarkistus(this)">
         <div class="tekstikentat">
           <label for="sukunimi">Sukunimi : </label>
           <input type="text" name="sukunimi" value="" id="sukunimi">
-          <label for="sukunimi">Etunimi : </label>
+          <label for="etunimi">Etunimi : </label>
           <input type="text" name="etunimi" value="" id="etunimi">
           <label for="osoite">Syötä Osoitetiedot : </label>
-          <input type="text" name="osoite" value="" placeholder="Kadun nimi" id="kadun_nimi"><br>
-          <input type="text" name="" value="" placeholder="Talon ja asunnon numero" id="talon_numero"><br>
-          <input type="text" name="" value="" placeholder="Postinumero" id="postinumero"><br>
-          <input type="text" name="" value="" placeholder="Maa" id="maa">
+          <input type="text" name="katu" value="" placeholder="Kadun nimi" id="kadun_nimi"><br>
+          <input type="text" name="asnumero" value="" placeholder="Talon ja asunnon numero" id="talon_numero"><br>
+          <input type="text" name="pnumero" value="" placeholder="Postinumero" id="postinumero"><br>
+          <input type="text" name="maa" value="" placeholder="Maa" id="maa">
           <label for="puhelin">Puhelin : </label>
           <input type="text" name="puhelin" value="" id="puhelin">
           <label for="email">Sähköposti : </label>
@@ -47,7 +47,7 @@
           <label for="ammattinimike">Ammattinimike (tai opiskelija) : </label>
           <input type="text" name="ammattinimike" value="" id="ammattinimike">
           <label for="syntymaaika">Syntymäaika : </label>
-          <input type= "date" name="" value="" id="syntymaaika">
+          <input type= "date" name="date" value="" id="syntymaaika">
 
         </div>
          <h3>Hintavaihtoehdot : </h3>
