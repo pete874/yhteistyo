@@ -179,6 +179,8 @@ else {
 
 
 }
+
+//asettaa date inputille max attribuutin jonka arvo on tämän hetkinen päivämäärä
 function attribuutti() {
   var aikaNyt = new Date();
   console.log(aikaNyt);
