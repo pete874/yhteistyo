@@ -334,4 +334,18 @@ padding-top: 4%;
   .form {
     width: 100%;
   }
+  .tekstikentat {
+    grid-gap: 0px;
+  }
+  .textarea {
+    display: grid;
+    margin-top: 1px;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1px;
+    text-align: center;
+    align-items: center;
+    width: 90%;
+    height: 15%;
+    margin-bottom: 1px;
+  }
 }
