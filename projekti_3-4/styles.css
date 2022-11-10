@@ -91,7 +91,7 @@ a:hover {
   opacity: 0.9;
   z-index: 1;
   text-align: center;
-  padding: 20px;
+
 }
 
 .form_esilla {
@@ -101,14 +101,14 @@ a:hover {
   font-weight: bold;
   background-color: #A9A9A9;
   width: 30%;
-  height: 800px;
+  height: 750px;
   border-radius: 10px;
-  top: 500px;
+  top: 455px;
   transition: 0.5s;
   opacity: 0.9;
   z-index: 1;
   text-align: center;
-  padding: 20px;
+
 }
 
 .form_kiinni {
@@ -295,8 +295,9 @@ padding-top: 4%;
 }
 
 
-/* Responsiivisyys */
+/* Responsiivisyuus */
 
+/* Landscape */
 @media only screen and (max-width: 1725px) {
   #span2 {
     display: none;
@@ -309,6 +310,9 @@ padding-top: 4%;
 @media only screen and (max-width: 1450px) {
   .form {
     width: 60%;
+  }
+  .tekstikentat {
+
   }
 }
 
@@ -348,4 +352,28 @@ padding-top: 4%;
     height: 15%;
     margin-bottom: 1px;
   }
+}
+
+/* Portrait */
+
+@media only screen and (max-width: 600px) {
+  .form {
+    width: 85%;
+    height: 600px;
+    margin-top: -70px;
+  }
+  .tekstikentat {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-height: 800px){
+
+.form {
+  width: 60%;
+  height: 600px;
+  margin-top: -70px;
+}
+.tekstikentat {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
