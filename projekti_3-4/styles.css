@@ -12,7 +12,7 @@ body {
 
 header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 80px;
   position: fixed;
   left: 12.5%;
@@ -30,7 +30,7 @@ header {
 
 .header_esilla {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 80px;
   position: fixed;
   left: 12.5
@@ -298,82 +298,98 @@ padding-top: 4%;
 /* Responsiivisyuus */
 
 /* Landscape */
-@media only screen and (max-width: 1725px) {
-  #span2 {
-    display: none;
-  }
-  .form {
-    width: 50%;
-  }
+@media only screen and (max-width: 1400px){
+header {
+  grid-template-columns: 1.5fr 1fr;
 }
 
-@media only screen and (max-width: 1450px) {
-  .form {
-    width: 60%;
-  }
-  .tekstikentat {
-
-  }
+.header_esilla {
+  grid-template-columns: 1.5fr 1fr;
 }
 
-@media only screen and (max-width: 1090px) {
-  .form {
-    width: 60%;
-  }
+#span1, #span2 {
+  display: inline;
+}
+nav {
+  margin-top: -4px;
 }
 
-@media only screen and (max-width: 970px) {
+.form {
+  font-size: 1.2em;
+  width: 80%;
+  height: 550px;
+  margin-top: -90px;
+}
+.tekstikentat {
+  grid-template-columns: 0.8fr 1.2fr 0.8fr 1.2fr;
+  grid-gap: 3px;
+}
+.textarea {
+  height: 150px;
+  margin: 0;
+}
+textarea {
+  height: 50%;
+  grid-gap: 0px;
+}
+}
+
+@media only screen and (max-width: 1000px) {
+  header {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .header_esilla {
+    grid-template-columns: 2fr 1fr;
+  }
+  nav {
+    margin-right: 65px;
+
+  }
   #span1 {
     display: none;
   }
-}
-
-@media only screen and (max-width: 670px) {
-  .form {
-    width: 60%;
+  .radio_btns {
+    display: inline;
   }
 }
-
-@media only screen and (max-width: 570px) {
-  .form {
-    width: 100%;
-  }
-  .tekstikentat {
-    grid-gap: 0px;
-  }
-  .textarea {
-    display: grid;
-    margin-top: 1px;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 1px;
-    text-align: center;
-    align-items: center;
-    width: 90%;
-    height: 15%;
-    margin-bottom: 1px;
-  }
-}
-
-/* Portrait */
 
 @media only screen and (max-width: 600px) {
+
+  header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #span2 {
+    display: none;
+  }
+
+  .header_esilla {
+    grid-template-columns: 1fr 1fr;
+  }
+  nav {
+    margin-right: 15px;
+  }
   .form {
-    width: 85%;
-    height: 600px;
-    margin-top: -70px;
+    width: 95%;
+    height: 550px;
+    margin-top: -80px;
   }
   .tekstikentat {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-@media only screen and (max-height: 800px){
-
-.form {
-  width: 60%;
-  height: 600px;
-  margin-top: -70px;
-}
-.tekstikentat {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+@media only screen and (max-height: 650px) and (max-width: 1000px) {
+  h2 {
+    display: none;
+  }
+  .form_esilla {
+    height: 310px;
+    margin-top: -215px;
+  }
+  .textarea {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 50px;
+  }
 }
