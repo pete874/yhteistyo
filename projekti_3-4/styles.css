@@ -302,19 +302,19 @@ padding-top: 4%;
     display: none;
   }
   .form {
-    width: 50%
+    width: 50%;
   }
 }
 
 @media only screen and (max-width: 1450px) {
   .form {
-    width: 60%
+    width: 60%;
   }
 }
 
 @media only screen and (max-width: 1090px) {
   .form {
-    width: 60%
+    width: 60%;
   }
 }
 
@@ -326,12 +326,12 @@ padding-top: 4%;
 
 @media only screen and (max-width: 670px) {
   .form {
-    width: 60%
+    width: 60%;
   }
 }
 
 @media only screen and (max-width: 570px) {
   .form {
-    width: 100%
+    width: 100%;
   }
 }
