@@ -295,9 +295,8 @@ padding-top: 4%;
 }
 
 
-/* Responsiivisyuus */
+/* Responsiivisuus */
 
-/* Landscape */
 @media only screen and (max-width: 1400px){
 header {
   grid-template-columns: 1.5fr 1fr;
