@@ -147,19 +147,6 @@ if(syntymaAika.length < 1) {
   return false;
 }
 
-// Tätä en ole saanut toimimaan. En tiedä tuleeko inputista value-arvoa ollenkaan
-/*
-if (!regExDate.test(regExDate)) {
-  alert("Syötä syntymäaikasi")
-  return false;
-  console.log(syntymaAika.value)
-}
-else {
-  alert("kiitos")
-  console.log(syntymaAika.value)
-}
-*/
-
 if (radioButtons == null) {
   alert("Valitse jokin vaihtoehto!");
   return false;
@@ -168,16 +155,6 @@ if (radioButtons == null) {
 else {
   alert("Kiitos osallistumisesta! Saat hetken kuluttua vahvistuksen sähköpostiisi.");
 }
-
-
-
-
-
-
-
-
-
-
 }
 
 //asettaa date inputille max attribuutin jonka arvo on tämän hetkinen päivämäärä
