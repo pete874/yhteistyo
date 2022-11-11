@@ -267,13 +267,16 @@ section {
   font-size: 1.3em;
   font-family: 'Cinzel', serif;
   text-align: center;
-
   background-color: #FFC025;
-  width: 33%;
-  height: 500px;
+  width: 25%;
   border-radius: 15px;
   box-shadow: 5px 5px 60px 5px black;
+  padding: 40px;
+}
 
+.article h3 {
+  font-size: 1.6em;
+  margin: 0;
 }
 
 #article_1 {
@@ -283,19 +286,6 @@ section {
 #article_2 {
   position: relative;
 }
-
-#article_1 h3 {
-padding-top: 14%
-}
-
-#article_2 h3 {
-padding-top: 4%;
-}
-
-.article p {
-  padding: 0px 40px;
-}
-
 
 /* Responsiivisuus */
 
@@ -350,6 +340,13 @@ textarea {
   .radio_btns {
     display: inline;
   }
+  #article_1 {
+    width: 50%;
+  }
+  #article_2 {
+    width: 50%;
+    margin-right: 190px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -378,6 +375,15 @@ textarea {
   .tekstikentat {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  #article_1 {
+    width: 75%;
+    margin-right: 17px;
+  }
+  #article_2 {
+    width: 75%;
+    margin-right: 50px;
+  }
+
 }
 
 @media only screen and (max-height: 650px) and (max-width: 1000px) {
@@ -392,4 +398,13 @@ textarea {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 50px;
   }
+  #article_1 {
+    width: 90%;
+    margin-right: 17px;
+  }
+  #article_2 {
+    width: 90%;
+    margin-right: 50px;
+  }
+}
 }
