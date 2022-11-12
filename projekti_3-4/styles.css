@@ -107,7 +107,7 @@ a:hover {
   border-radius: 10px;
   top: 455px;
   transition: 0.5s;
-  opacity: 0.9;
+  opacity: 0.95;
   z-index: 1;
   text-align: center;
 
@@ -273,79 +273,88 @@ section {
   box-shadow: 5px 5px 60px 5px black;
   padding: 40px;
 }
-
 .article h3 {
   font-size: 1.6em;
   margin: 0;
 }
-
 #article_1 {
   position: relative;
 }
-
 #article_2 {
   position: relative;
 }
 
 /* Responsiivisuus */
 
+@media only screen and (max-width: 2400px) {
+  #outro_title {
+    position: static;
+    margin: auto;
+  }
+}
+
 @media only screen and (max-width: 1400px){
-header {
+  header {
   grid-template-columns: 1.5fr 1fr;
-}
+  }
 
-.header_esilla {
-  grid-template-columns: 1.5fr 1fr;
-}
+  .header_esilla {
+    grid-template-columns: 1.5fr 1fr;
+  }
 
-#span2 {
-  display: none;
-}
-nav {
-  margin-top: -4px;
-}
+  #span2 {
+    display: none;
+  }
+  nav {
+    margin-top: -4px;
+  }
 
-.form {
-  font-size: 1.2em;
-  width: 80%;
-  height: 550px;
-  margin-top: -90px;
-}
-.tekstikentat {
-  grid-template-columns: 0.8fr 1.2fr 0.8fr 1.2fr;
-  grid-gap: 3px;
-}
-.textarea {
-  height: 150px;
-  margin: 0;
-}
-textarea {
-  height: 50%;
-  grid-gap: 0px;
-}
+  .form {
+    font-size: 1.2em;
+    width: 80%;
+    height: 550px;
+    margin-top: -90px;
+  }
+  .tekstikentat {
+    grid-template-columns: 0.8fr 1.2fr 0.8fr 1.2fr;
+    grid-gap: 3px;
+  }
+  .textarea {
+    height: 150px;
+    margin: 0;
+  }
+  textarea {
+    height: 50%;
+    grid-gap: 0px;
+  }
+  #article_1 {
+    position: static;
+    margin: auto;
+    width: 70%;
+  }
+  #article_2 {
+    position: static;
+    margin: auto;
+    width: 70%;
+  }
+  #outro_title {
+    right: 0% !important;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   header {
     grid-template-columns: 2fr 1fr;
   }
-
   .header_esilla {
     grid-template-columns: 2fr 1fr;
   }
-
   #span1 {
     display: none;
   }
   .radio_btns {
     display: inline;
-  }
-  #article_1 {
-    width: 50%;
-  }
-  #article_2 {
-    width: 50%;
-    margin-right: 190px;
   }
 }
 
@@ -356,17 +365,14 @@ textarea {
     width: 95vw;
     left: 2.5%;
   }
-
   #span2 {
     display: none;
   }
-
   .header_esilla {
     grid-template-columns: 2fr 1fr;
     width: 95vw;
     left: 2.5%;
   }
-
   .form {
     width: 95%;
     height: 550px;
@@ -375,13 +381,15 @@ textarea {
   .tekstikentat {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  #article_1 {
-    width: 75%;
-    margin-right: 17px;
+  #intro_title {
+    width: 85%;
   }
-  #article_2 {
-    width: 75%;
-    margin-right: 50px;
+  #outro_title {
+    right: 0% !important;
+    width: 85%;
+  }
+  .section_kuva {
+    height: 100vh !important;
   }
 
 }
@@ -398,13 +406,4 @@ textarea {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 50px;
   }
-  #article_1 {
-    width: 90%;
-    margin-right: 17px;
-  }
-  #article_2 {
-    width: 90%;
-    margin-right: 50px;
-  }
-}
 }
