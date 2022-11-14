@@ -162,13 +162,14 @@ textarea {
   background-color: #DDE2E8;
 }
 
-#submit {
+.form_btns {
   background-color: #DDE2E8;
   font-family: 'Bebas Neue', cursive;
   border: none;
   border-radius: 5px;
   width: 100px;
   height: 20px;
+  margin-left: 25px;
 }
 /* ----------------------- */
 

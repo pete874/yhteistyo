@@ -53,22 +53,23 @@
         </div>
          <h3>Hintavaihtoehdot : </h3>
         <div class="radio_btns">
-            <input type="radio" name="vip" value="">
+            <input type="radio" name="vip" value="VIP Premium 550€">
             <label for="vip">VIP Premium 550€</label>
-            <input type="radio" name="vip" value="">
+            <input type="radio" name="vip" value="Premium 320€">
             <label for="vip">Premium 320€</label>
-            <input type="radio" name="vip" value="">
+            <input type="radio" name="vip" value="Tavallinen 120€">
             <label for="vip">Tavallinen 120€</label>
           </div>
 
         <div class="textarea">
           <label for="ruokavalio">Erikoisruokavalio :</label>
-          <textarea name="name" rows="5" cols="40" id="ruokavalio"></textarea>
+          <textarea name="ruokavalio" rows="5" cols="40" id="ruokavalio"></textarea>
           <label for="lisatietoja">Lisätietoja :</label>
           <textarea name="lisatietoja" rows="5" cols="40" id="lisatietoja"></textarea>
 
         </div>
-        <button type="submit" name="button" id="submit">Lähetä</button>
+        <button class="form_btns" type="submit" name="button" id="submit">Lähetä</button>
+        <button class="form_btns" type="reset" name="button" id="reset_btn" onclick="resetLocal()">Tyhjennä</button>
 
 
       </form>

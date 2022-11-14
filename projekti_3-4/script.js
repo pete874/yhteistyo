@@ -1,4 +1,3 @@
-
 // Piilottaa headerin alaspäin scrollatessa ja paljastaa sen ylöspäin scrollatessa
 var headerEdellinenPaikka = window.pageYOffset;
 window.onscroll = function() {
@@ -27,6 +26,7 @@ window.onscroll = function() {
   if(window.pageYOffset < 1693) {
   article3.style.left = (article3Offset - 3960) + "px";}
 
+  /*
   //sectioneiden supistus
   var section2 = document.getElementById('section_2');
   var section3 = document.getElementById('section_3');
@@ -41,7 +41,7 @@ window.onscroll = function() {
   if(window.pageYOffset > 1744 && window.pageYOffset < 2135) {
     section3.style.height = (section3Offset + 3144) / 0.8 + "px";
   }
-
+  */
 
   //headerin piilotus
   var headerNykyPaikka = window.pageYOffset;
@@ -74,18 +74,42 @@ function poistaClass() {
 
 //formin tarkistus
 function tarkistus(form) {
-var sukunimi = form.sukunimi.value;
-var etunimi = form.etunimi.value;
-var katuosoite = form. katu.value;
-var asNumero = form.asnumero.value;
-var postiNumero = form.pnumero.value;
-var maa = form.maa.value;
-var puhelin = form.puhelin.value;
+
+var sukunimi = form.sukunimi.value.trim();
+var etunimi = form.etunimi.value.trim();
+var katuosoite = form.katu.value.trim();
+var asNumero = form.asnumero.value.trim();
+var postiNumero = form.pnumero.value.trim();
+var maa = form.maa.value.trim();
+var puhelin = form.puhelin.value.trim();
 var email = form.email.value;
 var tyonantaja = form.tyonantaja.value;
 var nimike = form.ammattinimike.value;
 var syntymaAika = form.date.value;
-var radioButtons = form.querySelector('input[name="vip"]:checked');
+var radioButtons = form.querySelector('input[name="vip"]:checked').value;
+var ruokavalio = form.ruokavalio.value;
+var lisatietoja = form.lisatietoja.value;
+
+// Tallennetaan syötetyt arvot local storageen
+window.localStorage.setItem("Sukunimi", sukunimi)
+window.localStorage.setItem("Etunimi", etunimi)
+window.localStorage.setItem("Katuosoite", katuosoite)
+window.localStorage.setItem("Asunnon nro", asNumero)
+window.localStorage.setItem("Postinumero", postiNumero)
+window.localStorage.setItem("Maa", maa)
+window.localStorage.setItem("Puh.nro", puhelin)
+window.localStorage.setItem("Email", email)
+window.localStorage.setItem("Tyonantaja", tyonantaja)
+window.localStorage.setItem("Ammattinimike", nimike)
+window.localStorage.setItem("Syntymaaika", syntymaAika)
+window.localStorage.setItem("Lippu", radioButtons)
+window.localStorage.setItem("Ruokavalio", ruokavalio)
+window.localStorage.setItem("Lisätietoja", lisatietoja)
+
+
+console.log(localStorage);
+
+
 
 // Regex-ehdot
 var regExNimet = /^[A-Za-z]+$/;
@@ -155,6 +179,11 @@ if (radioButtons == null) {
 else {
   alert("Kiitos osallistumisesta! Saat hetken kuluttua vahvistuksen sähköpostiisi.");
 }
+}
+
+function resetLocal() {
+  window.localStorage.clear();
+  console.log(localStorage);
 }
 
 //asettaa date inputille max attribuutin jonka arvo on tämän hetkinen päivämäärä
