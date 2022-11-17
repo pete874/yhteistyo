@@ -51,6 +51,8 @@ var valitutKortit = [];
 var valitutId = [];
 var kortitMatch = [];
 
+var voitot = 0;
+
 // Funktio jolla valitaan haluttu ruudukko
 function kaynnista() {
 /* Haetaan HTML:stö pudotusvalikko id:n perusteella. Syötetään omaan muuttujaan
@@ -93,6 +95,7 @@ document.getElementById('ruudukko44').innerHTML = "";
 
 
   }
+  console.log(cardsArray44);
 }
 //Sama funktio, mutta img-elementtejä tulee 24
 function ruudukko46() {
@@ -173,17 +176,27 @@ function onkoSamat() {
   // Määritetään pelin läpäisyn vaatimukset eri ruudukoille
   var korttienMäärä = document.querySelectorAll('img').length;
 
-  if(korttienMäärä === 16 && kortitMatch.length === 8 ||
-     korttienMäärä === 24 && kortitMatch.length === 12 ||
-     korttienMäärä === 36 && kortitMatch.length === 18) {
-
+  if (korttienMäärä === 16 && kortitMatch.length === 8) {
+    ruudukko44()
+    voitot++;
     alert('Läpäisit pelin! Mahtava suoritus!');
-  // Käynnistetään HTML-sivu uudestaan
-    location.reload()
+  }
+  if (korttienMäärä === 24 && kortitMatch.length === 12) {
+    ruudukko46()
+    voitot++;
+    alert('Läpäisit pelin! Mahtava suoritus!');
+  }
+  if (korttienMäärä === 36 && kortitMatch.length === 18) {
+    ruudukko66()
+    voitot++;
+    alert('Läpäisit pelin! Mahtava suoritus!');
+  }
     }
-
+  document.getElementById('voitot44').innerHTML = "Voitot: " + voitot;
 // Tyhjennetään valitutKortit-taulukko sekä valitutId-taulukko
+
   valitutKortit = [];
   valitutId = [];
+
 
 }
