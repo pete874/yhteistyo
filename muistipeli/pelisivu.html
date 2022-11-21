@@ -28,7 +28,7 @@
 
       <!-- Ruutujen määrän valinan dropdown boksi -->
       <form>
-        <select class="pelivaihtoehdot" id="pelivaihtoehdot_id" onchange="kaynnista()">
+        <select class="pelivaihtoehdot" id="pelivaihtoehdot_id" onchange="kaynnista();">
           <option value="">Valitse ruutujen määrä</option>
           <option value="44">4x4</option>
           <option value="46">4x6</option>
@@ -38,12 +38,15 @@
     </div>
       <!-- Muistipelille div-->
       <div class="muistipeli" id="muistipeli_id">
+
+        <p id="timer"></p>
         <div class="ruudukko" id="ruudukko44">
         </div>
         <div class="ruudukko" id="ruudukko46">
         </div>
         <div class="ruudukko" id="ruudukko66">
         </div>
+        <button type="button" name="button" onclick="resetTimer()">Nollaa</button>
         <p id="voitot"></p>
       </div>
 

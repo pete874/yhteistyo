@@ -63,20 +63,65 @@ function kaynnista() {
   if (selected == 44) {
     document.getElementById('ruudukko46').innerHTML = "";
     document.getElementById('ruudukko66').innerHTML = "";
+    resetTimer();
     ruudukko44();
-  }
+
+    }
   else if (selected == 46) {
     document.getElementById('ruudukko44').innerHTML = "";
     document.getElementById('ruudukko66').innerHTML = "";
+    resetTimer();
     ruudukko46();
-  }
+
+    }
   else {
     document.getElementById('ruudukko46').innerHTML = "";
     document.getElementById('ruudukko44').innerHTML = "";
+    resetTimer()
     ruudukko66();
   }
 
+  var timerVar = setInterval(timer, 1000);
+  var sekunnitYhteensa = 0;
+  var tunnit = 0;
+  var minuutit = 0;
+  var sekunnit = 0;
+
+  function timer() {
+    sekunnitYhteensa++;
+    tunnit = Math.floor(sekunnitYhteensa / 3600);
+    minuutit = Math.floor((sekunnitYhteensa - tunnit * 3600)/60);
+    sekunnit = sekunnitYhteensa - (tunnit * 3600 + minuutit * 60);
+    if(tunnit < 10) {
+    tunnit = "0" + tunnit;
+  }
+    if(minuutit < 10) {
+      minuutit = "0" + minuutit;
+    }
+    if(sekunnit < 10) {
+      sekunnit = "0" + sekunnit;
+    }
+    document.getElementById('timer').innerHTML = tunnit + ":" + minuutit + ":" + sekunnit;
+
+    
+  }
+  function resetTimer() {
+    clearInterval(timerVar);
+    document.getElementById('timer').innerHTML = "";
+    sekunnitYhteensa = 0;
+    tunnit = 0;
+    minuutit = 0;
+    sekunnit = 0;
+  }
+
 }
+
+
+
+
+
+
+
 
 // Funktio jolla luodaan ruudukko ja "tyhjät kortit" img-elementeillä
 function ruudukko44() {
@@ -182,7 +227,8 @@ function onkoSamat() {
     cardsArray.sort(() => 0.5 - Math.random());
     cardsArray44.sort(() => 0.5 - Math.random());
     kortitMatch = [];
-    kaynnista()
+    kaynnista();
+
   }
   // 46 ruudukolle
   if (korttienMäärä === 24 && kortitMatch.length === 12) {
@@ -193,6 +239,7 @@ function onkoSamat() {
     cardsArray46.sort(() => 0.5 - Math.random());
     kortitMatch = [];
     kaynnista()
+
   }
   // 66 ruudukolle
   if (korttienMäärä === 36 && kortitMatch.length === 18) {
@@ -207,6 +254,8 @@ function onkoSamat() {
   valitutKortit = [];
   valitutId = [];
 }
+
+
 
 
 
