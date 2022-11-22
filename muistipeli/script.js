@@ -50,8 +50,11 @@ const peliRuudut3 = document.getElementById('ruudukko66');
 var valitutKortit = [];
 var valitutId = [];
 var kortitMatch = [];
-
+ // - Pelin läpäisykertojen määrä
 var voitot = 0;
+ // - Globaali aikamuutuja timerfunktiolle (Näille voidaan määrittää )
+var timerVar;
+
 
 // Funktio jolla valitaan haluttu ruudukko
 function kaynnista() {
@@ -59,69 +62,28 @@ function kaynnista() {
    optionien arvo */
   var selectBox = document.getElementById('pelivaihtoehdot_id');
   var selected = selectBox.options[selectBox.selectedIndex].value
-
+// Jos pelaaja valitsee 4x4, jätetään muut tyhjäksi ja käynnistetään funktiot aikalaskurille sekä 4x4 ruudukolle
   if (selected == 44) {
     document.getElementById('ruudukko46').innerHTML = "";
     document.getElementById('ruudukko66').innerHTML = "";
-    resetTimer();
+    timer()
     ruudukko44();
-
     }
+
   else if (selected == 46) {
     document.getElementById('ruudukko44').innerHTML = "";
     document.getElementById('ruudukko66').innerHTML = "";
-    resetTimer();
+    timer()
     ruudukko46();
-
     }
+
   else {
     document.getElementById('ruudukko46').innerHTML = "";
     document.getElementById('ruudukko44').innerHTML = "";
-    resetTimer()
+    timer()
     ruudukko66();
   }
-
-  var timerVar = setInterval(timer, 1000);
-  var sekunnitYhteensa = 0;
-  var tunnit = 0;
-  var minuutit = 0;
-  var sekunnit = 0;
-
-  function timer() {
-    sekunnitYhteensa++;
-    tunnit = Math.floor(sekunnitYhteensa / 3600);
-    minuutit = Math.floor((sekunnitYhteensa - tunnit * 3600)/60);
-    sekunnit = sekunnitYhteensa - (tunnit * 3600 + minuutit * 60);
-    if(tunnit < 10) {
-    tunnit = "0" + tunnit;
-  }
-    if(minuutit < 10) {
-      minuutit = "0" + minuutit;
-    }
-    if(sekunnit < 10) {
-      sekunnit = "0" + sekunnit;
-    }
-    document.getElementById('timer').innerHTML = tunnit + ":" + minuutit + ":" + sekunnit;
-
-    
-  }
-  function resetTimer() {
-    clearInterval(timerVar);
-    document.getElementById('timer').innerHTML = "";
-    sekunnitYhteensa = 0;
-    tunnit = 0;
-    minuutit = 0;
-    sekunnit = 0;
-  }
-
 }
-
-
-
-
-
-
-
 
 // Funktio jolla luodaan ruudukko ja "tyhjät kortit" img-elementeillä
 function ruudukko44() {
@@ -145,7 +107,6 @@ function ruudukko46() {
 document.getElementById('ruudukko46').innerHTML = "";
 
   for(let i = 0; i < 24; i++) {
-
     var kortti = document.createElement('img');
     kortti.setAttribute('src', 'imgs/kuva0.png')
     kortti.setAttribute('data-id', i);
@@ -159,7 +120,6 @@ document.getElementById('ruudukko46').innerHTML = "";
 function ruudukko66() {
 document.getElementById('ruudukko66').innerHTML = "";
   for(let i = 0; i < 36; i++) {
-
     var kortti = document.createElement('img');
     kortti.setAttribute('src', 'imgs/kuva0.png')
     kortti.setAttribute('data-id', i);
@@ -256,6 +216,35 @@ function onkoSamat() {
 }
 
 
+// Lasurin funktio, joka laskee 0:sta ylöspäin sekunnin välein
+function timer() {
+  // Intervalli täytyy nollata joka kerta laskuria kutsuessa
+    clearInterval(timerVar);
+  // Käytetään html-elementti tyhjänä, niin nollaus näyttää selkeämmältä sivulla
+    document.getElementById('timer').innerHTML = "";
+    // Luodaan aikamuuttujat
+    var sekunnitYhteensa = 0;
+    var tunnit = 0;
+    var minuutit = 0;
+    var sekunnit = 0;
+// Tätä täytyy vielä koittaa sisäistää. Malli löytyi täältä: https://stackoverflow.com/questions/59998974/how-to-stop-and-reset-a-countdown-timer
+    timerVar = setInterval(function() {
+    sekunnitYhteensa++;
+    tunnit = Math.floor(sekunnitYhteensa / 3600);
+    minuutit = Math.floor((sekunnitYhteensa - tunnit * 3600)/60);
+    sekunnit = sekunnitYhteensa - (tunnit * 3600 + minuutit * 60);
+    if(tunnit < 10) {
+    tunnit = "0" + tunnit;
+  }
+    if(minuutit < 10) {
+      minuutit = "0" + minuutit;
+    }
+    if(sekunnit < 10) {
+      sekunnit = "0" + sekunnit;
+    }
+    document.getElementById('timer').innerHTML = tunnit + ":" + minuutit + ":" + sekunnit;
+}, 1000);
+}
 
 
 
