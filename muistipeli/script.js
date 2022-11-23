@@ -199,7 +199,6 @@ function onkoSamat() {
     cardsArray46.sort(() => 0.5 - Math.random());
     kortitMatch = [];
     kaynnista()
-
   }
   // 66 ruudukolle
   if (korttienMäärä === 36 && kortitMatch.length === 18) {
@@ -216,7 +215,7 @@ function onkoSamat() {
 }
 
 
-// Lasurin funktio, joka laskee 0:sta ylöspäin sekunnin välein
+// Laskurin funktio, joka laskee 0:sta ylöspäin sekunnin välein
 function timer() {
   // Intervalli täytyy nollata joka kerta laskuria kutsuessa
     clearInterval(timerVar);
@@ -231,7 +230,7 @@ function timer() {
     timerVar = setInterval(function() {
     sekunnitYhteensa++;
     tunnit = Math.floor(sekunnitYhteensa / 3600);
-    minuutit = Math.floor((sekunnitYhteensa - tunnit * 3600)/60);
+    minuutit = Math.floor((sekunnitYhteensa - tunnit * 3600) / 60);
     sekunnit = sekunnitYhteensa - (tunnit * 3600 + minuutit * 60);
     if(tunnit < 10) {
     tunnit = "0" + tunnit;
