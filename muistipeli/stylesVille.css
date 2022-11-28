@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: #AA8939;
   font-size: 14px;
+  background: #AA8939;
 }
 
 header {
@@ -44,16 +44,22 @@ a {
   background: lightgreen;
 }
 main {
+  background: #AA8939;
+  height: 90vh;
   padding-top: 75px;
 }
 
 #muistipeli_header {
+  font-size: 1.5em;
   text-align: center;
   padding: 25px;
 }
 
 #muistipeli_id {
+margin: auto;
 margin-top: -25px;
+width: 37%;
+
 }
 
 #ruudukko44 {
@@ -64,6 +70,7 @@ margin-top: -25px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
   padding: 25px 20px;
+  margin-top: 15px;
   border-radius: 15px;
 }
 
@@ -75,11 +82,8 @@ margin-top: -25px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
   padding: 25px 20px;
+  margin-top: -50px;
   border-radius: 15px;
-}
-
-#ruudukko46:active {
-background-color: white;
 }
 
 #ruudukko66 {
@@ -90,6 +94,7 @@ background-color: white;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
   padding: 25px 20px;
+  margin-top: -50px;
   border-radius: 15px;
 }
 
@@ -101,21 +106,38 @@ img {
 }
 
 
+#timer {
+  color: #FFDDAA;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 2em;
+  background: linear-gradient(to right, #AA8939, #553D00, #AA8939);
+  width: 180px;
+  padding: 5px;
+  border-radius: 25px;
+}
 
-
+#voitot {
+  color: #FFDDAA;
+  margin: 15px auto;
+  text-align: center;
+  font-size: 1.5em;
+  width: 180px;
+  padding: 5px;
+  border-radius: 25px;
+}
 
 
 
 footer {
-  position: absolute;
-  bottom: 20px;
+  background: linear-gradient(to top, #553D00, #AA8939);
   width: 100vw;
+  height: 5vh;
 }
 
 #tekijat_div {
 margin: auto;
 text-align: center;
-
 width: 100vw;
 }
 
