@@ -17,7 +17,6 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   background: linear-gradient(to right, #7D570B, #d9c891, #7D570B);
-  border-radius: 5px;
   transition: 0.5s;
 }
 
@@ -31,9 +30,11 @@ header h1 {
   width: 350px;
   color: #FFDDAA;
   font-size: 3em;
+  text-shadow: 1px 1px 5px black;
 }
 
 #h2_1 {
+  text-shadow: 1px 1px 5px black;
   margin-top: -80px;
   margin-left: 275px;
   width: 200px;
@@ -41,15 +42,17 @@ header h1 {
 }
 
 #h2_2 {
+  text-shadow: 1px 1px 5px black;
   margin-top: -75px;
-  margin-left: 325px;
+  margin-left: 350px;
   width: 200px;
   color: #FFEABF;
 }
 
 #h2_3 {
+  text-shadow: 1px 1px 5px black;
   margin-top: -70px;
-  margin-left: 375px;
+  margin-left: 425px;
   width: 200px;
   color: #FFEABF;
 }
@@ -70,19 +73,19 @@ a {
   text-decoration: none;
   font-weight: bolder;
   color: #71570C;
-  background: #E1BB6E;
+  background: #FFEABF;
   border: none;
   transition: 0.5s;
 }
 
 a:hover {
-  background: #FFFBBF;
-  color: #50A46F;
+  background: #71570C;
+  color: #FFEABF;
 }
 
 main {
   background: linear-gradient(to right, #FFF2CA, white);
-  height: 90vh;
+  height: 92vh;
   padding-top: 75px;
 }
 
@@ -101,8 +104,8 @@ width: 37%;
 
 select {
   border: none;
-  width: 210px;
-  height: 30px;
+  width: 220px;
+  height: 35px;
   background:  #FFF2CA;
   color: #71570C;
   border-radius: 5px;
@@ -114,7 +117,6 @@ select {
 
 select:hover {
   color: #71570C;
-  background: #E3C980;
   box-shadow: 0px 1px 5px 4px #71570C;
 }
 
@@ -184,9 +186,10 @@ img {
 }
 
 footer {
-  background: linear-gradient(to top, #553D00, #FFF2CA);
+  background: linear-gradient(to right, #7D570B, #d9c891, #7D570B);
   width: 100vw;
-  height: 5vh;
+  height: 30px;
+
 }
 
 #tekijat_div {
