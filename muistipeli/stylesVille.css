@@ -3,7 +3,7 @@ body {
   padding: 0;
   width: 100vw;
   font-size: 14px;
-  background: #AA8939;
+  background: linear-gradient(to right, #FFF2CA, white);
 }
 
 header {
@@ -65,8 +65,8 @@ margin-top: -95px;
 
 a {
   font-size: 1.8em;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 75px;
+  margin-right: 75px;
   padding: 5px;
   border: 2px solid black;
   border-radius: 10px 5px;
@@ -76,6 +76,7 @@ a {
   background: #FFEABF;
   border: none;
   transition: 0.5s;
+  text-shadow: 1px 1px 2px green;
 }
 
 a:hover {
@@ -84,8 +85,8 @@ a:hover {
 }
 
 main {
-  background: linear-gradient(to right, #FFF2CA, white);
-  height: 92vh;
+
+  min-height: 100vh;
   padding-top: 75px;
 }
 
@@ -176,7 +177,7 @@ img {
 }
 
 #voitot {
-  color: #FFDDAA;
+  color: #71570C;
   margin: 15px auto;
   text-align: center;
   font-size: 1.5em;
@@ -186,9 +187,11 @@ img {
 }
 
 footer {
+
   background: linear-gradient(to right, #7D570B, #d9c891, #7D570B);
   width: 100vw;
-  height: 30px;
+
+
 
 }
 
@@ -196,6 +199,7 @@ footer {
 margin: auto;
 text-align: center;
 width: 100vw;
+
 }
 
 #tekijat_dl {
@@ -203,4 +207,35 @@ width: 100vw;
   margin: auto;
   width: 50vw;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 1400px) {
+
+header {
+  height: 55px;
+}
+
+header h1 {
+  margin-top: 0px;
+}
+
+h2 {
+  display: none;
+}
+
+a {
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 1.5em;
+}
+
+main {
+  padding-top: 25px;
+  min-height: 100vh;
+}
+
+footer {
+  height: 50px;
+}
+
 }
