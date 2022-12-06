@@ -23,8 +23,8 @@ window.onscroll = function() {
 
   if(window.pageYOffset < 1100) {
   article2.style.right = (article2Offset - 2600) + "px";}
-  if(window.pageYOffset < 1693) {
-  article3.style.left = (article3Offset - 3960) + "px";}
+  if(window.pageYOffset < 2150) {
+  article3.style.left = (article3Offset - 5050) + "px";}
 
   /*
   //sectioneiden supistus
