@@ -21,10 +21,16 @@ window.onscroll = function() {
   var article3 = document.getElementById('article_2');
   var article3Offset = window.pageYOffset * 2.36;
 
+  console.log(window.innerWidth)
+
   if(window.pageYOffset < 1100) {
   article2.style.right = (article2Offset - 2600) + "px";}
   if(window.pageYOffset < 2150) {
   article3.style.left = (article3Offset - 5050) + "px";}
+  // 2k resoluutiolle määriteltiin omat arvot innerwidth-ominaisuutta hyödyntäen(artikkeli liikkui alunperin väärään aikaan)
+  if(window.innerWidth > 2559 && window.pageYOffset < 2450) {
+    article3.style.left = (article3Offset - 5800) + "px";}
+
 
   /*
   //sectioneiden supistus
