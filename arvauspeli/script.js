@@ -33,6 +33,7 @@ function arvaus(numero) {
       for (let j = 1; j <= numero.value; j++) {
         document.getElementById(j).classList.add("disabled")
       }
+      // Huom, Sweetalert ei pysäytä koodin lukemista samalla tavalla kuin alert
       Swal.fire({                                           // Custom alertboxin komentoja löytyy täältä: https://sweetalert2.github.io/
         position: 'top',
         icon: 'warning',
