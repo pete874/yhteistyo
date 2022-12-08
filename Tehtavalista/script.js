@@ -60,7 +60,7 @@ function lisaa() {
   li.appendChild(editNappi);
   li.appendChild(doneNappi);
 
-
+  // eventlistenerit edit ja done napeille
   editNappi.addEventListener("click", function() {
   p.contentEditable = true;
   p.focus();
