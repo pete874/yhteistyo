@@ -21,9 +21,17 @@ header {
 }
 
 header:hover {
-  box-shadow: 0px 15px 25px 2px #50A46F;
+  box-shadow: 0px 15px 25px 2px #d9c891;
 }
 
+#indexHeader {
+  text-align: center;
+  padding-top: 22%;
+  font-size: 3.5em;
+  color: #7D570B;
+  text-shadow: 1px 1px 5px black;
+
+}
 header h1 {
   margin-top: 15px;
   margin-left: 35px;
