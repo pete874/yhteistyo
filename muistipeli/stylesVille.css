@@ -21,7 +21,7 @@ header {
 }
 
 header:hover {
-  box-shadow: 0px 15px 25px 2px #d9c891;
+  box-shadow: 0px 15px 25px 10px #d9c891;
 }
 
 #indexHeader {
@@ -37,30 +37,34 @@ header h1 {
   margin-left: 35px;
   width: 350px;
   color: #FFDDAA;
+  font-family: 'Zen Dots', cursive;
   font-size: 3em;
   text-shadow: 1px 1px 5px black;
 }
 
 #h2_1 {
+  font-family: 'Zen Dots', cursive;
   text-shadow: 1px 1px 5px black;
-  margin-top: -80px;
-  margin-left: 275px;
-  width: 200px;
-  color: #FFEABF;
-}
-
-#h2_2 {
-  text-shadow: 1px 1px 5px black;
-  margin-top: -75px;
+  margin-top: -90px;
   margin-left: 350px;
   width: 200px;
   color: #FFEABF;
 }
 
+#h2_2 {
+  font-family: 'Zen Dots', cursive;
+  text-shadow: 1px 1px 5px black;
+  margin-top: -80px;
+  margin-left: 400px;
+  width: 200px;
+  color: #FFEABF;
+}
+
 #h2_3 {
+  font-family: 'Zen Dots', cursive;
   text-shadow: 1px 1px 5px black;
   margin-top: -70px;
-  margin-left: 425px;
+  margin-left: 450px;
   width: 200px;
   color: #FFEABF;
 }
@@ -72,6 +76,7 @@ margin-top: -95px;
 }
 
 a {
+  font-family: 'Zen Dots', cursive;
   font-size: 1.8em;
   margin-left: 75px;
   margin-right: 75px;
@@ -79,7 +84,6 @@ a {
   border: 2px solid black;
   border-radius: 10px 5px;
   text-decoration: none;
-  font-weight: bolder;
   color: #71570C;
   background: #FFEABF;
   border: none;
@@ -99,7 +103,8 @@ main {
 }
 
 #muistipeli_header {
-  font-size: 1.5em;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2em;
   text-align: center;
   padding: 25px;
   color: #7D570B;
@@ -217,7 +222,9 @@ width: 100vw;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-@media only screen and (max-width: 1400px) {
+/* Media queryt alkaa */
+
+@media only screen and (max-width: 1650px) {
 
 header {
   height: 55px;
@@ -227,13 +234,11 @@ header h1 {
   margin-top: 0px;
 }
 
-h2 {
+.header_h2, h4 {
   display: none;
 }
 
 a {
-  margin-left: 25px;
-  margin-right: 25px;
   font-size: 1.5em;
 }
 
@@ -245,5 +250,37 @@ main {
 footer {
   height: 50px;
 }
+}
 
+@media only screen and (max-width: 1200px) {
+
+a {
+  float: right;
+  margin: 0;
+  margin-right: 30px;
+  margin-top: -5px;
+}
+}
+
+@media only screen and (max-width: 620px) {
+header {
+  height: 100px;
+  display: inline;
+}
+h1 {
+
+text-align: center;
+}
+
+h2 {
+  margin-top: 65px;
+  font-size: 1.2em;
+}
+
+a {
+    margin-top: 40px;
+    margin-right: 120px;
+    align-items: center;
+    justify-content: center;
+  }
 }
