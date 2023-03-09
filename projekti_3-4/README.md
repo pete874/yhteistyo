@@ -1,2 +1,3 @@
 - Tässä projektissa on yhdistetty projektit 3 & 4 (parallel-harjoitus sekä tapahtuman ilmoittautumissivu).
 - Local storage on lisätty lomakkeeseen.
+- HTML,CSS,Javascript
